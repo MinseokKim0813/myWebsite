@@ -1,74 +1,33 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 const featuredProjects = [
   {
-    title: "Neural Network Visualizer",
+    title: "Foodify",
     description:
-      "An interactive web application that visualizes neural network architectures and training processes in real-time. Built with React and TensorFlow.js for browser-based machine learning.",
-    tech: ["React", "TensorFlow.js", "D3.js", "TypeScript"],
-    github: "#",
-    external: "#",
+      "Social platform where users swipe to discover trending restaurants, like and share lists, and explore popular recommendations. Built the frontend with React, scraped data from Yelp and Google Maps, and managed the data using Firebase. Helps users connect over shared taste while helping small businesses get discovered through a social media–like experience.",
+    tech: ["React", "JavaScript", "Python", "Web Scraping", "Firebase"],
+    github: undefined,
+    external: "https://foodify.cc",
     image: "gradient-1",
   },
   {
-    title: "Distributed Systems Framework",
+    title: "Brainlot",
     description:
-      "A lightweight framework for building distributed applications with built-in consensus algorithms, fault tolerance, and horizontal scaling capabilities.",
-    tech: ["Rust", "gRPC", "Raft", "Docker"],
-    github: "#",
-    external: "#",
+      "Co-founded and launched an iOS application with over 300 downloads, featuring an infinite vertical scrolling interface that transforms user-uploaded documents into a continuous stream of interactive, gamified multiple choice quizzes. Engineered the endless quiz generation pipeline and a flexible inference architecture supporting cloud-based and offline local LLMs. Selected for the university startup incubator.",
+    tech: ["TypeScript", "Mobile App", "Database", "LLMs"],
+    github: undefined,
+    external: "https://apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB",
     image: "gradient-2",
   },
   {
-    title: "NLP Research Toolkit",
+    title: "DeepGenre",
     description:
-      "A comprehensive toolkit for natural language processing research, featuring pre-trained models, data preprocessing pipelines, and evaluation metrics.",
-    tech: ["Python", "PyTorch", "Transformers", "FastAPI"],
-    github: "#",
-    external: "#",
+      "Multi-label CNN model to predict movie genres across 28 distinct classes based on movie posters. Achieved 59.98% precision (16.8× the random baseline). Used OCR and in-painting to remove poster text, ensuring classification relied solely on visual artwork and eliminating predictive bias from movie titles.",
+    tech: ["Python", "PyTorch", "Computer Vision", "CNN"],
+    github: "https://github.com/MinseokKim0813/DeepGenre",
+    external: "https://github.com/MinseokKim0813/DeepGenre",
     image: "gradient-3",
-  },
-];
-
-const otherProjects = [
-  {
-    title: "Code Review Bot",
-    description: "An AI-powered GitHub bot that provides intelligent code review suggestions and catches potential bugs.",
-    tech: ["Python", "GPT-4", "GitHub API"],
-    github: "#",
-  },
-  {
-    title: "Real-time Collaboration",
-    description: "A collaborative code editor with real-time synchronization using CRDTs and WebSockets.",
-    tech: ["TypeScript", "Y.js", "WebSocket"],
-    github: "#",
-  },
-  {
-    title: "Algorithm Visualizer",
-    description: "Interactive visualizations for common algorithms and data structures for educational purposes.",
-    tech: ["React", "Canvas API", "Framer Motion"],
-    github: "#",
-    external: "#",
-  },
-  {
-    title: "Dev Portfolio CLI",
-    description: "A command-line tool to generate and deploy developer portfolios from a simple config file.",
-    tech: ["Node.js", "Ink", "Vercel API"],
-    github: "#",
-  },
-  {
-    title: "Smart Home Hub",
-    description: "IoT dashboard for managing smart home devices with voice control and automation rules.",
-    tech: ["React", "MQTT", "Node.js"],
-    github: "#",
-    external: "#",
-  },
-  {
-    title: "Research Paper Summarizer",
-    description: "ML-powered tool that generates concise summaries of academic research papers.",
-    tech: ["Python", "BERT", "Streamlit"],
-    github: "#",
   },
 ];
 
@@ -127,20 +86,28 @@ export const Projects = () => {
                       </span>
                     </div>
                     <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6">
-                      <a
-                        href={project.github}
-                        className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
-                        aria-label="GitHub"
-                      >
-                        <Github className="w-6 h-6" />
-                      </a>
-                      <a
-                        href={project.external}
-                        className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
-                        aria-label="External Link"
-                      >
-                        <ExternalLink className="w-6 h-6" />
-                      </a>
+                      {project.github?.trim() && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          aria-label="GitHub"
+                        >
+                          <Github className="w-6 h-6" />
+                        </a>
+                      )}
+                      {project.external?.trim() && (
+                        <a
+                          href={project.external}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          aria-label="External Link"
+                        >
+                          <ExternalLink className="w-6 h-6" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -155,7 +122,17 @@ export const Projects = () => {
                 >
                   <p className="text-primary font-mono text-sm mb-2">Featured Project</p>
                   <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">
-                    <a href={project.external}>{project.title}</a>
+                    {(project.external?.trim() || project.github?.trim()) ? (
+                      <a
+                        href={project.external?.trim() || project.github?.trim()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.title}
+                      </a>
+                    ) : (
+                      <span>{project.title}</span>
+                    )}
                   </h3>
                   <div className="bg-card border border-border rounded-lg p-6 mb-4 shadow-lg">
                     <p className="text-muted-foreground">{project.description}</p>
@@ -172,59 +149,6 @@ export const Projects = () => {
             ))}
           </div>
 
-          {/* Other projects */}
-          <div>
-            <h3 className="text-2xl font-bold text-center mb-12">
-              Other Noteworthy Projects
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {otherProjects.map((project, index) => (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.05 * index }}
-                  className="bg-card border border-border rounded-lg p-6 card-hover group"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <Folder className="w-10 h-10 text-primary" />
-                    <div className="flex gap-3">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                          aria-label="GitHub"
-                        >
-                          <Github className="w-5 h-5" />
-                        </a>
-                      )}
-                      {project.external && (
-                        <a
-                          href={project.external}
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                          aria-label="External Link"
-                        >
-                          <ExternalLink className="w-5 h-5" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h4>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {project.description}
-                  </p>
-                  <ul className="flex flex-wrap gap-2 font-mono text-xs text-muted-foreground">
-                    {project.tech.map((tech) => (
-                      <li key={tech}>{tech}</li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
