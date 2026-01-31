@@ -4,11 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-// GitHub Pages serves from a subpath (e.g. /myWebsite/). Set base to your repo name.
-const base = process.env.NODE_ENV === "production" ? "/myWebsite/" : "/";
-
+// Relative base works on GitHub Pages for any repo name (assets load from current path).
 export default defineConfig(({ mode }) => ({
-  base,
+  base: "./",
   server: {
     host: "::",
     port: 8080,

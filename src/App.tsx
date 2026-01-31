@@ -8,12 +8,19 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// GitHub Pages serves from /repoName/ — derive basename so routing works for any repo name.
+function getBasename(): string {
+  const segments = window.location.pathname.split("/").filter(Boolean);
+  if (segments.length === 0) return "";
+  return "/" + segments[0];
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+      <BrowserRouter basename={getBasename()}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
