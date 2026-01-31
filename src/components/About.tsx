@@ -1,28 +1,42 @@
 import { motion } from "framer-motion";
 import { Code2, Database, Brain, Terminal, GraduationCap } from "lucide-react";
+import { publications } from "./Research";
 
 const skills = [
   {
     category: "Languages",
-    items: ["Python", "TypeScript", "Java", "C++", "Rust"],
+    items: [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "C++",
+      "C",
+      "SQL",
+      "HTML",
+      "CSS",
+    ],
     icon: Code2,
   },
   {
     category: "Frameworks",
-    items: ["React", "Node.js", "Django", "TensorFlow", "PyTorch"],
+    items: ["React", "Node.js", "Express", "Spring", "Flask", "FastAPI"],
     icon: Terminal,
   },
   {
     category: "Databases",
-    items: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
+    items: ["PostgreSQL", "MongoDB", "Firebase", "Oracle", "AWS RDS"],
     icon: Database,
   },
   {
     category: "AI/ML",
-    items: ["Deep Learning", "NLP", "Computer Vision", "Reinforcement Learning"],
+    items: ["PyTorch", "Deep Learning", "NLP", "Computer Vision", "LLMs"],
     icon: Brain,
   },
 ];
+
+const CODING_START_YEAR = 2018;
+const yearsCoding = new Date().getFullYear() - CODING_START_YEAR;
 
 export const About = () => {
   return (
@@ -78,9 +92,12 @@ export const About = () => {
                   <h3 className="font-mono font-semibold">Education</h3>
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  <span className="text-foreground font-medium">New York University Abu Dhabi (NYUAD)</span>
+                  <span className="text-foreground font-medium">
+                    New York University Abu Dhabi (NYUAD)
+                  </span>
                   <br />
-                  Bachelor of Science · Major in Computer Science · Minor in Applied Mathematics
+                  Bachelor of Science · Major in Computer Science · Minor in
+                  Applied Mathematics
                   <br />
                   Senior · Graduation Expected May 2026 · GPA: 3.71 / 4.0 · UAE
                 </p>
@@ -89,16 +106,18 @@ export const About = () => {
               {/* Quick stats */}
               <div className="grid grid-cols-3 gap-4">
                 <div className="bg-card border border-border rounded-lg p-4 text-center card-hover">
-                  <p className="text-3xl font-bold text-primary">5+</p>
+                  <p className="text-3xl font-bold text-primary">
+                    {yearsCoding}+
+                  </p>
                   <p className="text-sm text-muted-foreground">Years Coding</p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-4 text-center card-hover">
-                  <p className="text-3xl font-bold text-accent">20+</p>
+                  <p className="text-3xl font-bold text-accent">15+</p>
                   <p className="text-sm text-muted-foreground">Projects</p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-4 text-center card-hover">
-                  <p className="text-3xl font-bold text-syntax-string">10+</p>
-                  <p className="text-sm text-muted-foreground">Publications</p>
+                  <p className="text-3xl font-bold text-syntax-string">{publications.length}</p>
+                  <p className="text-sm text-muted-foreground">Researches</p>
                 </div>
               </div>
             </motion.div>
@@ -124,7 +143,9 @@ export const About = () => {
                     <div className="p-2 rounded-lg bg-primary/10">
                       <skillGroup.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="font-mono font-semibold">{skillGroup.category}</h3>
+                    <h3 className="font-mono font-semibold">
+                      {skillGroup.category}
+                    </h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((skill) => (

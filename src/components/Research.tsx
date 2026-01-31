@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FileText, ExternalLink, BookOpen } from "lucide-react";
 
-const publications = [
+export const publications = [
   {
     title: "Efficient Transformer Architectures for Edge Deployment",
     venue: "International Conference on Machine Learning (ICML)",
