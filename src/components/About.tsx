@@ -56,18 +56,16 @@ export const About = () => {
                   <span className="syntax-comment">{"/* Bio */"}</span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I'm a senior at New York University Abu Dhabi (NYUAD) in the UAE, graduating in May 2026. 
-                  I'm majoring in Computer Science and minoring in Applied Mathematics. Passionate about pushing 
-                  the boundaries of what's possible with technology, my journey began with a curiosity for how 
-                  things work and has evolved into a deep commitment to creating impactful software solutions.
+                  I am a Computer Science major and Applied Mathematics minor at NYU Abu Dhabi (Class of 2026) with a passion for building scalable systems and integrating AI into practical software solutions. My journey in software engineering spans data engineering, full-stack development, and machine learning.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Currently, I'm focused on machine learning research and full-stack development, 
-                  working on projects that bridge the gap between cutting-edge research and practical applications.
+                  Currently, I am the co-founder of Brainlot, an iOS platform that uses LLMs to transform documents into interactive quizzes. My technical background is grounded in hands-on industry experience: <strong className="text-foreground">Data Engineering for FinTech & Trading</strong> at XBTO Trading in New York (real-time performance monitoring with Prometheus and Grafana); <strong className="text-foreground">Full Stack</strong> at a startup, leading migration of core data infrastructure to AWS RDS for pre-seed growth; and <strong className="text-foreground">AI Integration</strong> at Liwa Capital, developing AI-powered workflows to automate email processing and enhance team productivity.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Beyond industry work, I am deeply invested in research. I have developed novel models for Arabic name gender classification (GenderAr) and context-aware mathematical typesetting (MathTextor), tackling complex challenges in NLP and HCI.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  When I'm not coding, you'll find me contributing to open-source projects, 
-                  reading research papers, or exploring new technologies.
+                  <strong className="text-foreground">Technical toolkit:</strong> Python, C++, Java, PyTorch, AWS, React.js, Docker, and SQL. I am always looking for opportunities to solve complex problems with code. Feel free to connect!
                 </p>
               </div>
 

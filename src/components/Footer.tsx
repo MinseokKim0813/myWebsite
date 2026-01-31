@@ -33,9 +33,6 @@ export const Footer = () => {
               Built with <Heart className="w-4 h-4 text-destructive" /> and lots of{" "}
               <span className="text-primary">{"<code/>"}</span>
             </p>
-            <p className="mt-1 text-xs">
-              © {new Date().getFullYear()} Minseok Kim. All rights reserved.
-            </p>
           </div>
         </div>
       </div>

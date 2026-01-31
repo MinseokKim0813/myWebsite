@@ -134,9 +134,12 @@ export const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                Passionate about building elegant solutions to complex problems.
-                I specialize in software development, research, and turning
-                ideas into reality through code.
+                I'm passionate about systems that scale and making AI practical,
+                building software that people and teams actually use. Right now
+                I'm especially interested in machine learning and data: problems
+                where data, infrastructure, and intelligent automation meet. I
+                enjoy building end-to-end solutions. Always open to new
+                challenges and collaborations!
               </motion.p>
 
               {/* Social links */}
