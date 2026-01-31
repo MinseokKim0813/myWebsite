@@ -43,12 +43,80 @@ const featuredProjects = [
     external: "https://github.com/MinseokKim0813/DeepGenre",
     image: "gradient-3",
   },
+  {
+    title: "TrendMap",
+    subtitle: "Real-Time Media Attention Analyzer (github.com/MinseokKim0813/TrendMap)",
+    tech: ["Data Analysis", "Web Scraping", "Python"],
+    highlights: [
+      "Built a tool that tracks media mentions of top American companies, analyzing trends across industries and states.",
+      "It identifies sectors and regions receiving the most attention, offering insights for informed investment decisions and market analysis.",
+    ],
+    github: "https://github.com/MinseokKim0813/TrendMap",
+    external: "https://github.com/MinseokKim0813/TrendMap",
+    image: "gradient-4",
+  },
+  {
+    title: "MathTextor",
+    subtitle: "Humanizing Mathematical Typesetting (github.com/MinseokKim0813/MathTextor, Research report)",
+    tech: ["Full Stack", "Web App", "Human-Computer Interaction", "Javascript"],
+    highlights: [
+      "Developed a context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context, eliminating the need for LaTeX memorization.",
+      "Conducted a user study with 24 participants, demonstrating that the system reduced typesetting time by 38.6% for novice users compared to standard LaTeX editors.",
+      "Optimized user experience by building an LLM inference pipeline with 72.9% F1 score, yielding a 4.57/7 usability score through the application of HCI design principles.",
+    ],
+    github: "https://github.com/MinseokKim0813/MathTextor",
+    external: "https://github.com/MinseokKim0813/MathTextor",
+    image: "gradient-5",
+  },
+  {
+    title: "FundMonitor",
+    subtitle: "Crowdfunding Campaign Data Scraper & Analyzer (github.com/MinseokKim0813/FundMonitor)",
+    tech: ["Data Analysis", "Web Scraping", "Python"],
+    highlights: [
+      "Developed a web scraper tool to extract and analyze real-time data from crowdfunding platforms, providing insights into funding progress across various categories and regions.",
+      "Identified global funding trends and underfunded sectors to facilitate optimized corporate social responsibility strategies, targeted investments, and product innovation opportunities.",
+    ],
+    github: "https://github.com/MinseokKim0813/FundMonitor",
+    external: "https://github.com/MinseokKim0813/FundMonitor",
+    image: "gradient-6",
+  },
+  {
+    title: "GenderAr",
+    subtitle: "Arabic Name Gender Classification (github.com/MinseokKim0813/GenderAr, Research report)",
+    tech: ["Machine Learning", "NLP", "Transformers", "Python"],
+    highlights: [
+      "Developed a novel hybrid gender classifier for Arabic names by combining two custom-trained models: a morphological analyzer leveraging specific linguistic rules and a fine-tuned Transformer for deep learning inference.",
+      "Achieved 91.68% accuracy, outperforming the baseline by successfully integrating linguistic rules with deep learning inference.",
+      "Implemented and evaluated three distinct classification methodologies: Morphological Analyzer Model (Logistic Regression), Semantic Analyzer Model (Word Embeddings), Deep Learning Model (Fine-tuning Transformer), and a Hybrid Cascade system.",
+    ],
+    github: "https://github.com/MinseokKim0813/GenderAr",
+    external: "https://github.com/MinseokKim0813/GenderAr",
+    image: "gradient-7",
+  },
+  {
+    title: "SenseFit",
+    subtitle: "Automatic Cursor Sensitivity Adjust Tool (github.com/MinseokKim0813/Sense_Fit)",
+    tech: ["Software Engineering", "Python", "PyQt5", "pytest"],
+    highlights: [
+      "Developed a desktop application that tracks real-time cursor data and analyzes movement patterns to calculate and suggest optimal mouse sensitivity (DPI) for users.",
+      "Engineered complex analysis algorithms to identify and quantify suboptimal behaviors, including complex cursor movement patterns to generate data-driven recommendations.",
+      "Ensured high reliability by achieving over 90% unit and system test coverage using pytest.",
+    ],
+    github: "https://github.com/MinseokKim0813/Sense_Fit",
+    external: "https://github.com/MinseokKim0813/Sense_Fit",
+    image: "gradient-8",
+  },
 ];
 
 const gradientClasses: Record<string, string> = {
   "gradient-1": "from-primary/20 to-accent/20",
   "gradient-2": "from-syntax-keyword/20 to-primary/20",
   "gradient-3": "from-accent/20 to-syntax-string/20",
+  "gradient-4": "from-primary/20 to-accent/20",
+  "gradient-5": "from-syntax-keyword/20 to-primary/20",
+  "gradient-6": "from-accent/20 to-syntax-string/20",
+  "gradient-7": "from-primary/20 to-accent/20",
+  "gradient-8": "from-syntax-keyword/20 to-primary/20",
 };
 
 export const Projects = () => {
