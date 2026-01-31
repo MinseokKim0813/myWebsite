@@ -56,9 +56,10 @@ export const About = () => {
                   <span className="syntax-comment">{"/* Bio */"}</span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I'm a Computer Science student and researcher passionate about pushing the boundaries 
-                  of what's possible with technology. My journey began with a curiosity for how things 
-                  work and has evolved into a deep commitment to creating impactful software solutions.
+                  I'm a senior at New York University Abu Dhabi (NYUAD) in the UAE, graduating in May 2026. 
+                  I'm majoring in Computer Science and minoring in Applied Mathematics. Passionate about pushing 
+                  the boundaries of what's possible with technology, my journey began with a curiosity for how 
+                  things work and has evolved into a deep commitment to creating impactful software solutions.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Currently, I'm focused on machine learning research and full-stack development, 

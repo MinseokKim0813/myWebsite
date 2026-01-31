@@ -32,7 +32,7 @@ export const Footer = () => {
               <span className="text-primary">{"<code/>"}</span>
             </p>
             <p className="mt-1 text-xs">
-              © {new Date().getFullYear()} Your Name. All rights reserved.
+              © {new Date().getFullYear()} Minseok Kim. All rights reserved.
             </p>
           </div>
         </div>

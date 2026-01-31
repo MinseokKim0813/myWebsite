@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 
 const roles = [
-  "Computer Science Researcher",
-  "Full Stack Developer", 
-  "Open Source Contributor",
+  "NYUAD Senior",
+  "Computer Science Major",
+  "Applied Math Minor",
   "Machine Learning Enthusiast",
 ];
 
@@ -85,7 +85,7 @@ export const Hero = () => {
                 <span className="syntax-keyword">const</span>{" "}
                 <span className="syntax-variable">developer</span>{" "}
                 <span className="text-foreground">=</span>{" "}
-                <span className="syntax-string">"Your Name"</span>;
+                <span className="syntax-string">"Minseok Kim"</span>;
               </p>
 
               <div className="pt-4">
@@ -96,7 +96,7 @@ export const Hero = () => {
                   transition={{ delay: 0.4 }}
                 >
                   <span className="text-foreground">Hello, I'm </span>
-                  <span className="text-gradient">Developer</span>
+                  <span className="text-gradient">Minseok Kim</span>
                 </motion.h1>
               </div>
 

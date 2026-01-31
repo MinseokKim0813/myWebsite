@@ -15,10 +15,10 @@ const experiences = [
     ],
   },
   {
-    company: "Research Lab",
-    role: "Graduate Research Assistant",
+    company: "NYU Abu Dhabi",
+    role: "Undergraduate Researcher",
     period: "2023 - Present",
-    location: "University",
+    location: "Abu Dhabi, UAE",
     description: [
       "Conducting research on efficient machine learning models for edge devices",
       "Published 3 papers in top-tier venues (ICML, ACL, NeurIPS)",
