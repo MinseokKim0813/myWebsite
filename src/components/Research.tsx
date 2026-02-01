@@ -15,6 +15,7 @@ export const publications = [
     venue: "Research Paper",
     year: "—",
     authors: ["Minseok Kim"],
+    affiliation: "New York University Abu Dhabi",
     abstract:
       "A novel hybrid gender classifier for Arabic names combining a morphological analyzer with linguistic rules and a fine-tuned Transformer, achieving 91.68% accuracy and outperforming the baseline by integrating linguistic rules with deep learning inference.",
     link: "https://drive.google.com/file/d/12Fqo6CqU5zPI6X3DGB6CRB2hLpGwGlxB/view?usp=sharing",
@@ -26,7 +27,7 @@ export const publications = [
     year: "—",
     authors: ["Minseok Kim"],
     advisors:
-      "Advised by: Moumena Chaqfeh (moumena@nyu.edu), Steven Euijong Whang (swhang@kaist.ac.kr)",
+      "Moumena Chaqfeh (moumena@nyu.edu), Steven Euijong Whang (swhang@kaist.ac.kr)",
     abstract:
       "A context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context. A user study with 24 participants showed a 38.6% reduction in typesetting time for novice users; the system achieved 72.9% F1 score and 4.57/7 usability.",
     link: "https://drive.google.com/file/d/1sMfhqQK3Pa2jVjlNYSmCbQ5T4j-dNu1X/view?usp=sharing",
@@ -156,9 +157,10 @@ export const Research = () => {
                       </div>
                       <p className="text-sm text-muted-foreground mt-2">
                         {pub.authors.join(", ")}
+                        {"affiliation" in pub && pub.affiliation && `, ${pub.affiliation}`}
                       </p>
                       {"advisors" in pub && pub.advisors && (
-                        <p className="text-sm text-muted-foreground mt-2">
+                        <p className="text-sm text-muted-foreground mt-1">
                           {pub.advisors}
                         </p>
                       )}
