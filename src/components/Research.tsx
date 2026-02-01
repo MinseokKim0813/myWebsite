@@ -126,7 +126,7 @@ export const Research = () => {
                     {currentResearchActivity.lab}:{" "}
                     {currentResearchActivity.topic}
                   </h4>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <p className="text-sm text-foreground mt-1">
                     {currentResearchActivity.role} at{" "}
                     {currentResearchActivity.institution}
                   </p>
@@ -154,7 +154,14 @@ export const Research = () => {
                             {pub.type}
                           </span>
                           <h4 className="text-lg font-bold group-hover:text-primary transition-colors">
-                            {pub.title}
+                            <a
+                              href={pub.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline focus:underline focus:outline-none"
+                            >
+                              {pub.title}
+                            </a>
                           </h4>
                         </div>
                         <a
@@ -176,7 +183,7 @@ export const Research = () => {
                           Advised by: {pub.advisors}
                         </p>
                       )}
-                      <p className="text-muted-foreground mt-3 text-sm line-clamp-2">
+                      <p className="text-foreground mt-3 text-sm line-clamp-2">
                         {pub.abstract}
                       </p>
                     </div>
