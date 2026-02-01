@@ -26,7 +26,7 @@ export const publications = [
       "MathTextor: Humanizing Mathematical Typesetting for Undergraduate Students",
     venue: "Research Paper",
     year: "2025",
-    authors: ["Minseok Kim [NYU Abu Dhabi], Moumena Chaqfeh [NYU Abu Dhabi"],
+    authors: ["Minseok Kim [NYU Abu Dhabi], Moumena Chaqfeh [NYU Abu Dhabi]"],
     advisors: "Moumena Chaqfeh [NYU Abu Dhabi], Steven Euijong Whang [KAIST]",
     abstract:
       "A context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context. A user study with 24 participants showed a 38.6% reduction in typesetting time for novice users; the system achieved 72.9% F1 score and 4.57/7 usability.",
