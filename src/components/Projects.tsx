@@ -105,6 +105,7 @@ const featuredProjects = [
     github: "https://github.com/MinseokKim0813/TrendMap",
     external: "https://github.com/MinseokKim0813/TrendMap",
     image: "gradient-7",
+    imageSrc: "trendmap-preview.png",
   },
   {
     title: "FundMonitor",
