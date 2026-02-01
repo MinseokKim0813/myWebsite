@@ -3,34 +3,24 @@ import { FileText, ExternalLink, BookOpen } from "lucide-react";
 
 export const publications = [
   {
-    title: "Efficient Transformer Architectures for Edge Deployment",
-    venue: "International Conference on Machine Learning (ICML)",
-    year: "2024",
-    authors: ["Your Name", "Co-Author One", "Co-Author Two"],
+    title: "GenderAr: Arabic Name Gender Classification",
+    venue: "Research Report",
+    year: "—",
+    authors: ["Minseok Kim"],
     abstract:
-      "We present a novel approach to compressing large transformer models for deployment on edge devices while maintaining competitive performance...",
-    link: "#",
-    type: "Conference",
+      "A novel hybrid gender classifier for Arabic names combining a morphological analyzer with linguistic rules and a fine-tuned Transformer, achieving 91.68% accuracy and outperforming the baseline by integrating linguistic rules with deep learning inference.",
+    link: "https://drive.google.com/file/d/12Fqo6CqU5zPI6X3DGB6CRB2hLpGwGlxB/view?usp=sharing",
+    type: "Research Report",
   },
   {
-    title: "Self-Supervised Learning for Low-Resource Languages",
-    venue: "Annual Meeting of the ACL",
-    year: "2023",
-    authors: ["Your Name", "Co-Author Three"],
+    title: "MathTextor: Humanizing Mathematical Typesetting",
+    venue: "Research Report",
+    year: "—",
+    authors: ["Minseok Kim"],
     abstract:
-      "This paper introduces a self-supervised learning framework specifically designed for low-resource language understanding...",
-    link: "#",
-    type: "Conference",
-  },
-  {
-    title: "A Survey on Federated Learning: Challenges and Opportunities",
-    venue: "IEEE Transactions on Neural Networks",
-    year: "2023",
-    authors: ["Your Name", "Co-Author Four", "Co-Author Five"],
-    abstract:
-      "We provide a comprehensive survey of federated learning techniques, covering privacy-preserving mechanisms, communication efficiency...",
-    link: "#",
-    type: "Journal",
+      "A context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context. A user study with 24 participants showed a 38.6% reduction in typesetting time for novice users; the system achieved 72.9% F1 score and 4.57/7 usability.",
+    link: "https://drive.google.com/file/d/1sMfhqQK3Pa2jVjlNYSmCbQ5T4j-dNu1X/view?usp=drive_link",
+    type: "Research Report",
   },
 ];
 

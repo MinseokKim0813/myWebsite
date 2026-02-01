@@ -164,7 +164,7 @@ export const Projects = () => {
               >
                 <div
                   className={`flex flex-col gap-6 ${
-                    index % 2 === 0 ? "md:col-span-7" : "md:col-span-7 md:col-start-6 md:items-end md:text-right"
+                    index % 2 === 0 ? "md:col-span-7" : "md:col-span-7 md:col-start-6"
                   }`}
                 >
                 {/* Project image/gradient */}
@@ -257,11 +257,7 @@ export const Projects = () => {
                       ))}
                     </ul>
                   </div>
-                  <ul
-                    className={`flex flex-wrap gap-3 font-mono text-sm text-muted-foreground ${
-                      index % 2 === 1 ? "md:justify-end" : ""
-                    }`}
-                  >
+                  <ul className="flex flex-wrap gap-3 font-mono text-sm text-muted-foreground">
                     {project.tech.map((tech) => (
                       <li key={tech}>{tech}</li>
                     ))}
