@@ -1,26 +1,36 @@
 import { motion } from "framer-motion";
-import { FileText, ExternalLink, BookOpen } from "lucide-react";
+import { FileText, ExternalLink, BookOpen, FlaskConical } from "lucide-react";
+
+const currentResearchActivity = {
+  role: "Research Assistant",
+  lab: "eBRAIN Lab",
+  institution: "NYU Abu Dhabi",
+  topic: "LLM Jailbreaks for Security",
+};
 
 export const publications = [
   {
-    title: "GenderAr: Arabic Name Gender Classification",
-    venue: "Research Report",
+    title:
+      "Gender Identification of Arabic Names: A Comparative Analysis of Morphological, Semantic and Deep Learning Approaches",
+    venue: "Research Paper",
     year: "—",
     authors: ["Minseok Kim"],
     abstract:
       "A novel hybrid gender classifier for Arabic names combining a morphological analyzer with linguistic rules and a fine-tuned Transformer, achieving 91.68% accuracy and outperforming the baseline by integrating linguistic rules with deep learning inference.",
     link: "https://drive.google.com/file/d/12Fqo6CqU5zPI6X3DGB6CRB2hLpGwGlxB/view?usp=sharing",
-    type: "Research Report",
+    type: "Research Paper",
   },
   {
-    title: "MathTextor: Humanizing Mathematical Typesetting",
-    venue: "Research Report",
+    title: "MathTextor: Humanizing Mathematical Typesetting for Undergraduate Students",
+    venue: "Research Paper",
     year: "—",
     authors: ["Minseok Kim"],
+    advisors:
+      "Advised by: Moumena Chaqfeh (moumena@nyu.edu), Steven Euijong Whang (swhang@kaist.ac.kr)",
     abstract:
       "A context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context. A user study with 24 participants showed a 38.6% reduction in typesetting time for novice users; the system achieved 72.9% F1 score and 4.57/7 usability.",
     link: "https://drive.google.com/file/d/1sMfhqQK3Pa2jVjlNYSmCbQ5T4j-dNu1X/view?usp=sharing",
-    type: "Research Report",
+    type: "Research Paper",
   },
 ];
 
@@ -61,6 +71,30 @@ export const Research = () => {
             <div className="flex-1 h-px bg-border" />
           </div>
 
+          {/* Current research activity */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-card border border-border rounded-lg p-6 mb-16 card-hover flex flex-col sm:flex-row sm:items-center gap-4"
+          >
+            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <FlaskConical className="w-6 h-6 text-primary" />
+            </div>
+            <div className="flex-1">
+              <p className="font-mono font-semibold text-primary">
+                {currentResearchActivity.role}
+              </p>
+              <p className="font-semibold mt-1">
+                {currentResearchActivity.lab} at {currentResearchActivity.institution}
+              </p>
+              <p className="text-muted-foreground mt-1 text-sm">
+                &ldquo;{currentResearchActivity.topic}&rdquo;
+              </p>
+            </div>
+          </motion.div>
+
           {/* Research interests */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
             {researchInterests.map((interest, index) => (
@@ -85,7 +119,7 @@ export const Research = () => {
           <div>
             <h3 className="text-2xl font-bold mb-8 font-mono">
               <span className="syntax-comment">{"// "}</span>
-              Selected Publications
+              Research
             </h3>
             <div className="space-y-6">
               {publications.map((pub, index) => (
@@ -127,6 +161,11 @@ export const Research = () => {
                       <p className="text-sm font-mono text-primary mt-1">
                         {pub.venue} • {pub.year}
                       </p>
+                      {"advisors" in pub && pub.advisors && (
+                        <p className="text-sm text-muted-foreground mt-2">
+                          {pub.advisors}
+                        </p>
+                      )}
                       <p className="text-muted-foreground mt-3 text-sm line-clamp-2">
                         {pub.abstract}
                       </p>
