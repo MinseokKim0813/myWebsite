@@ -4,33 +4,53 @@ import { publications } from "./Research";
 
 const skills = [
   {
-    category: "Languages",
+    category: "Languages (and Markup Languages)",
     items: [
       "Python",
-      "JavaScript",
-      "TypeScript",
-      "Java",
       "C++",
-      "C",
       "SQL",
+      "C",
+      "JavaScript",
+      "Java",
+      "Assembly",
+      "Regex",
       "HTML",
       "CSS",
+      "YAML",
     ],
     icon: Code2,
   },
   {
-    category: "Frameworks",
-    items: ["React", "Node.js", "Express", "Spring", "Flask", "FastAPI"],
+    category: "Frameworks & Tools",
+    items: [
+      "Figma",
+      "Git",
+      "React",
+      "Node.js",
+      "Grafana",
+      "Wireshark",
+      "FlutterFlow",
+      "Prometheus",
+      "Express",
+      "Spring",
+      "Flask",
+      "REST APIs",
+      "FastAPI",
+      "PyTorch",
+      "pytest",
+      "Selenium",
+      "MATLAB",
+    ],
     icon: Terminal,
   },
   {
-    category: "Databases",
-    items: ["PostgreSQL", "MongoDB", "Firebase", "Oracle", "AWS RDS"],
+    category: "Databases & Infra",
+    items: ["AWS RDS", "MongoDB", "Firebase", "Prometheus"],
     icon: Database,
   },
   {
     category: "AI/ML",
-    items: ["PyTorch", "Deep Learning", "NLP", "Computer Vision", "LLMs"],
+    items: ["PyTorch", "LLMs", "Computer Vision", "NLP", "MLLMs"],
     icon: Brain,
   },
 ];
@@ -70,16 +90,56 @@ export const About = () => {
                   <span className="syntax-comment">{"/* Bio */"}</span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I am a Computer Science major and Applied Mathematics minor at NYU Abu Dhabi (Class of 2026) with a passion for building scalable systems and integrating AI into practical software solutions. My journey in software engineering spans data engineering, full-stack development, and machine learning.
+                  I am a Computer Science major and Applied Mathematics minor at
+                  NYU Abu Dhabi (Class of 2026, GPA: 3.71) with a passion for
+                  building scalable systems and integrating data and AI into
+                  practical software solutions. My journey spans data
+                  engineering, full-stack development, and machine learning.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Currently, I am the co-founder of Brainlot, an iOS platform that uses LLMs to transform documents into interactive quizzes. My technical background is grounded in hands-on industry experience: <strong className="text-foreground">Data Engineering for FinTech & Trading</strong> at XBTO Trading in New York (real-time performance monitoring with Prometheus and Grafana); <strong className="text-foreground">Full Stack</strong> at a startup, leading migration of core data infrastructure to AWS RDS for pre-seed growth; and <strong className="text-foreground">AI Integration</strong> at Liwa Capital, developing AI-powered workflows to automate email processing and enhance team productivity.
+                  Currently, I am a{" "}
+                  <strong className="text-foreground">
+                    Research Assistant
+                  </strong>{" "}
+                  at the eBRAIN Lab at NYU Abu Dhabi, working on LLM Jailbreak
+                  Security research with a focus on multimodal LLMs (MLLMs). I
+                  am also the co-founder of Brainlot, an iOS application with
+                  over 400 downloads that transforms documents into an infinite
+                  stream of interactive, gamified quizzes using LLMs—selected
+                  for the NYUAD startup incubator. My industry experience
+                  includes:{" "}
+                  <strong className="text-foreground">
+                    Software Engineering
+                  </strong>{" "}
+                  at XBTO Trading in New York (real-time performance monitoring
+                  with Prometheus and Grafana, data pipeline engineering with
+                  Oracle);{" "}
+                  <strong className="text-foreground">Full Stack</strong> at
+                  Swop Holdings in Dubai (migrating core infrastructure from
+                  Firebase to AWS RDS at preseed stage);{" "}
+                  <strong className="text-foreground">AI Integration</strong> at
+                  Liwa Capital (AI-powered email processing with OpenAI and
+                  Microsoft Graph API); and{" "}
+                  <strong className="text-foreground">Backend</strong> at IT
+                  BAND in South Korea (renovating the Korea Maritime
+                  Transportation Safety Authority website with Java Spring and
+                  Oracle).
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Beyond industry work, I am deeply invested in research. I have developed novel models for Arabic name gender classification (GenderAr) and context-aware mathematical typesetting (MathTextor), tackling complex challenges in NLP and HCI.
+                  Beyond industry work, I build side projects—from social
+                  platforms like Foodify (trending restaurants) and ML models
+                  like DeepGenre (movie genre classification from posters), to
+                  desktop tools like SenseFit (cursor sensitivity optimization
+                  with 90%+ test coverage). I am always eager to tackle complex
+                  problems with code.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Technical toolkit:</strong> Python, C++, Java, PyTorch, AWS, React.js, Docker, and SQL. I am always looking for opportunities to solve complex problems with code. Feel free to connect!
+                  <strong className="text-foreground">
+                    Technical toolkit:
+                  </strong>{" "}
+                  Python, C++, Java, JavaScript, PyTorch, AWS, React, Node.js,
+                  Docker, SQL, Prometheus, Grafana, and more. Feel free to
+                  connect!
                 </p>
               </div>
 
@@ -116,7 +176,9 @@ export const About = () => {
                   <p className="text-sm text-muted-foreground">Projects</p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-4 text-center card-hover">
-                  <p className="text-3xl font-bold text-syntax-string">{publications.length}</p>
+                  <p className="text-3xl font-bold text-syntax-string">
+                    {publications.length}
+                  </p>
                   <p className="text-sm text-muted-foreground">Researches</p>
                 </div>
               </div>
