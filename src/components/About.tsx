@@ -94,7 +94,7 @@ export const About = () => {
                   NYU Abu Dhabi (Class of 2026, GPA: 3.71) with a passion for
                   building scalable systems and integrating data and AI into
                   practical software solutions. My journey spans data
-                  engineering, full-stack development, and machine learning.
+                  engineering, backend development, and machine learning.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Currently, I am a{" "}
@@ -105,41 +105,41 @@ export const About = () => {
                   Security research with a focus on multimodal LLMs (MLLMs). I
                   am also the co-founder of Brainlot, an iOS application with
                   over 400 downloads that transforms documents into an infinite
-                  stream of interactive, gamified quizzes using LLMs—selected
+                  stream of interactive, gamified quizzes using LLMs - selected
                   for the NYUAD startup incubator. My industry experience
                   includes:{" "}
                   <strong className="text-foreground">
                     Software Engineering
                   </strong>{" "}
                   at XBTO Trading in New York (real-time performance monitoring
-                  with Prometheus and Grafana, data pipeline engineering with
-                  Oracle);{" "}
+                  with Prometheus and Grafana, data pipeline engineering for
+                  cryptocurrency);{" "}
                   <strong className="text-foreground">Full Stack</strong> at
-                  Swop Holdings in Dubai (migrating core infrastructure from
-                  Firebase to AWS RDS at preseed stage);{" "}
+                  Swop Holdings in Dubai (migrating core database infrastructure
+                  from Firebase to AWS RDS and contributing directly to the
+                  product vision at pre-seed stage);{" "}
                   <strong className="text-foreground">AI Integration</strong> at
-                  Liwa Capital (AI-powered email processing with OpenAI and
-                  Microsoft Graph API); and{" "}
+                  Liwa Capital (AI-powered email processing with LLMs and
+                  increased team productivity ); and{" "}
                   <strong className="text-foreground">Backend</strong> at IT
                   BAND in South Korea (renovating the Korea Maritime
-                  Transportation Safety Authority website with Java Spring and
-                  Oracle).
+                  Transportation Safety Authority website with Java Spring).
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Beyond industry work, I build side projects—from social
+                  Beyond industry work, I build side projects - from social
                   platforms like Foodify (trending restaurants) and ML models
-                  like DeepGenre (movie genre classification from posters), to
+                  like DeepGenre (movie genre classifier from movie posters), to
                   desktop tools like SenseFit (cursor sensitivity optimization
                   with 90%+ test coverage). I am always eager to tackle complex
-                  problems with code.
+                  problems with code and learn new technologies.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   <strong className="text-foreground">
                     Technical toolkit:
                   </strong>{" "}
-                  Python, C++, Java, JavaScript, PyTorch, AWS, React, Node.js,
-                  Docker, SQL, Prometheus, Grafana, and more. Feel free to
-                  connect!
+                  Python, C++, SQL, C, Java, JavaScript, PyTorch, AWS, React,
+                  Node.js, Prometheus, Grafana, FlutterFlow, MATLAB, and more.
+                  Feel free to contact me!
                 </p>
               </div>
 
