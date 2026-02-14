@@ -1,232 +1,200 @@
 import { motion } from "framer-motion";
-import { Code2, Database, Brain, Terminal, GraduationCap } from "lucide-react";
-import { publications } from "./Research";
+import { useEffect, useState } from "react";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 
-const skills = [
-  {
-    category: "Languages (and Markup Languages)",
-    items: [
-      "Python",
-      "C++",
-      "SQL",
-      "C",
-      "JavaScript",
-      "Java",
-      "Assembly",
-      "Regex",
-      "HTML",
-      "CSS",
-      "YAML",
-    ],
-    icon: Code2,
-  },
-  {
-    category: "Frameworks & Tools",
-    items: [
-      "Figma",
-      "Git",
-      "React",
-      "Node.js",
-      "Grafana",
-      "Wireshark",
-      "FlutterFlow",
-      "Prometheus",
-      "Express",
-      "Spring",
-      "Flask",
-      "REST APIs",
-      "FastAPI",
-      "PyTorch",
-      "pytest",
-      "Selenium",
-      "MATLAB",
-    ],
-    icon: Terminal,
-  },
-  {
-    category: "Databases & Infra",
-    items: ["AWS RDS", "MongoDB", "Firebase", "Prometheus"],
-    icon: Database,
-  },
-  {
-    category: "AI/ML",
-    items: ["PyTorch", "LLMs", "Computer Vision", "NLP", "MLLMs"],
-    icon: Brain,
-  },
+const roles = [
+  "Data Science",
+  "Data Engineering",
+  "Backend",
+  "Machine Learning",
+  "Software Engineering",
 ];
 
-const CODING_START_YEAR = 2018;
-const yearsCoding = new Date().getFullYear() - CODING_START_YEAR;
+export const Hero = () => {
+  const [currentRole, setCurrentRole] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
-export const About = () => {
+  useEffect(() => {
+    const role = roles[currentRole];
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          if (displayText.length < role.length) {
+            setDisplayText(role.slice(0, displayText.length + 1));
+          } else {
+            setTimeout(() => setIsDeleting(true), 2000);
+          }
+        } else {
+          if (displayText.length > 0) {
+            setDisplayText(displayText.slice(0, -1));
+          } else {
+            setIsDeleting(false);
+            setCurrentRole((prev) => (prev + 1) % roles.length);
+          }
+        }
+      },
+      isDeleting ? 50 : 100,
+    );
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, currentRole]);
+
   return (
-    <section id="about" className="py-24 relative">
-      <div className="container mx-auto px-6">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-6xl mx-auto"
-        >
-          {/* Section header */}
-          <div className="flex items-center gap-4 mb-12">
-            <span className="text-primary font-mono">01.</span>
-            <h2 className="text-3xl md:text-4xl font-bold">About Me</h2>
-            <div className="flex-1 h-px bg-border" />
-          </div>
+          className="absolute top-20 left-10 w-72 h-72 rounded-full bg-primary/5 blur-3xl"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-accent/5 blur-3xl"
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+      </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Bio */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6"
-            >
-              <div className="bg-card border border-border rounded-lg p-6">
-                <div className="font-mono text-sm mb-4">
-                  <span className="syntax-comment">{"/* Bio */"}</span>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  I am a Computer Science major and Applied Mathematics minor at
-                  NYU Abu Dhabi (Class of 2026, GPA: 3.71) with a passion for
-                  building scalable systems and integrating data and AI into
-                  practical software solutions. My journey spans data
-                  engineering, backend development, and machine learning.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Currently, I am a{" "}
-                  <strong className="text-foreground">
-                    Research Assistant
-                  </strong>{" "}
-                  at the eBRAIN Lab at NYU Abu Dhabi, working on LLM Jailbreak
-                  Security research with a focus on multimodal LLMs (MLLMs). I
-                  am also the co-founder of Brainlot, an iOS application with
-                  over 400 downloads that transforms documents into an infinite
-                  stream of interactive, gamified quizzes using LLMs - selected
-                  for the NYUAD startup incubator. My industry experience
-                  includes:{" "}
-                  <strong className="text-foreground">
-                    Software Engineering
-                  </strong>{" "}
-                  at XBTO Trading in New York (real-time performance monitoring
-                  with Prometheus and Grafana, data pipeline engineering for
-                  cryptocurrency);{" "}
-                  <strong className="text-foreground">Full Stack</strong> at
-                  Swop Holdings in Dubai (migrating core database infrastructure
-                  from Firebase to AWS RDS and contributing directly to the
-                  product vision at pre-seed stage);{" "}
-                  <strong className="text-foreground">AI Integration</strong> at
-                  Liwa Capital (AI-powered email processing with LLMs and
-                  increased team productivity ); and{" "}
-                  <strong className="text-foreground">Backend</strong> at IT
-                  BAND in South Korea (renovating the Korea Maritime
-                  Transportation Safety Authority website with Java Spring).
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Beyond industry work, I build side projects - from social
-                  platforms like Foodify (trending restaurants) and ML models
-                  like DeepGenre (movie genre classifier from movie posters), to
-                  desktop tools like SenseFit (cursor sensitivity optimization
-                  with 90%+ test coverage). I am always eager to tackle complex
-                  problems with code and learn new technologies.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">
-                    Technical toolkit:
-                  </strong>{" "}
-                  Python, C++, SQL, C, Java, JavaScript, PyTorch, AWS, React,
-                  Node.js, Prometheus, Grafana, FlutterFlow, MATLAB, and more.
-                  Feel free to contact me!
-                </p>
-              </div>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto">
+          {/* Terminal header */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-card border border-border rounded-t-lg p-3 flex items-center gap-2"
+          >
+            <div className="flex gap-2">
+              <div className="w-3 h-3 rounded-full bg-destructive" />
+              <div className="w-3 h-3 rounded-full bg-syntax-string" />
+              <div className="w-3 h-3 rounded-full bg-accent" />
+            </div>
+            <span className="text-muted-foreground text-sm font-mono ml-4">
+              ~/portfolio
+            </span>
+          </motion.div>
 
-              {/* Education */}
-              <div className="bg-card border border-border rounded-lg p-4 card-hover">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-primary/10">
-                    <GraduationCap className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-mono font-semibold">Education</h3>
-                </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  <span className="text-foreground font-medium">
-                    New York University Abu Dhabi (NYUAD)
-                  </span>
-                  <br />
-                  Bachelor of Science · Major in Computer Science · Minor in
-                  Applied Mathematics
-                  <br />
-                  Senior · Graduation Expected May 2026 · GPA: 3.71 / 4.0 · UAE
-                </p>
-              </div>
+          {/* Terminal body */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-card/80 backdrop-blur-sm border border-t-0 border-border rounded-b-lg p-8 md:p-12"
+          >
+            <div className="font-mono space-y-4">
+              <p className="text-muted-foreground">
+                <span className="syntax-comment">
+                  {"// Welcome to my portfolio"}
+                </span>
+              </p>
 
-              {/* Quick stats */}
-              <div className="grid grid-cols-3 gap-4">
-                <div className="bg-card border border-border rounded-lg p-4 text-center card-hover">
-                  <p className="text-3xl font-bold text-primary">
-                    {yearsCoding}+
-                  </p>
-                  <p className="text-sm text-muted-foreground">Years Coding</p>
-                </div>
-                <div className="bg-card border border-border rounded-lg p-4 text-center card-hover">
-                  <p className="text-3xl font-bold text-accent">15+</p>
-                  <p className="text-sm text-muted-foreground">Projects</p>
-                </div>
-                <div className="bg-card border border-border rounded-lg p-4 text-center card-hover">
-                  <p className="text-3xl font-bold text-syntax-string">
-                    {publications.length}
-                  </p>
-                  <p className="text-sm text-muted-foreground">Researches</p>
-                </div>
-              </div>
-            </motion.div>
+              <p>
+                <span className="syntax-keyword">const</span>{" "}
+                <span className="syntax-variable">developer</span>{" "}
+                <span className="text-foreground">=</span>{" "}
+                <span className="syntax-string">"Minseok Kim"</span>;
+              </p>
 
-            {/* Skills */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-4"
-            >
-              {skills.map((skillGroup, index) => (
-                <motion.div
-                  key={skillGroup.category}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.1 * index }}
-                  className="bg-card border border-border rounded-lg p-4 card-hover"
+              <div className="pt-4">
+                <motion.h1
+                  className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
                 >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <skillGroup.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="font-mono font-semibold">
-                      {skillGroup.category}
-                    </h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.items.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 text-sm rounded-full bg-secondary text-secondary-foreground font-mono"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
+                  <span className="text-foreground">Hello, I'm </span>
+                  <span className="text-gradient">Minseok</span>
+                </motion.h1>
+              </div>
+
+              <div className="h-8 md:h-10">
+                <p className="text-xl md:text-2xl text-muted-foreground">
+                  <span className="syntax-function">{"> "}</span>
+                  <span className="text-foreground">{displayText}</span>
+                  <span className="terminal-cursor animate-blink">_</span>
+                </p>
+              </div>
+
+              <motion.p
+                className="text-muted-foreground text-sm md:text-base pt-1 font-mono"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                <span className="syntax-comment">{"// "}</span>
+                Senior @ NYU Abu Dhabi · CS Major, Applied Math Minor ·
+                Graduating May 2026
+              </motion.p>
+
+              <motion.p
+                className="text-muted-foreground pt-4 text-lg leading-relaxed"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+              >
+                I'm passionate about systems that scale and integrating data and
+                AI into practical software solutions. Right now I'm especially
+                interested in data and machine learning: problems where data,
+                infrastructure, and intelligent automation meet. I enjoy
+                building end-to-end solutions. Always open to new challenges and
+                collaborations!
+              </motion.p>
+
+              {/* Social links */}
+              <motion.div
+                className="flex gap-4 pt-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+              >
+                <a
+                  href="https://github.com/MinseokKim0813"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 glow-primary"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/minseok0813"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="mailto:mk7545@nyu.edu"
+                  className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  aria-label="Email"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, y: [0, 10, 0] }}
+          transition={{ delay: 1, y: { duration: 2, repeat: Infinity } }}
+        >
+          <a
+            href="#about"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <ChevronDown className="w-8 h-8" />
+          </a>
         </motion.div>
       </div>
     </section>
   );
 };
 
-export default About;
+export default Hero;
