@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { getBasePath } from "@/lib/utils";
+const RESUME_URL =
+  "https://drive.google.com/file/d/174KKtzVPBAuqyA99TP3WRpJFy-K63EnE/view";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -56,7 +57,7 @@ export const Navbar = () => {
               </motion.a>
             ))}
             <motion.a
-              href={`${getBasePath()}/resume.pdf`}
+              href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: -20 }}
@@ -98,7 +99,7 @@ export const Navbar = () => {
                 </a>
               ))}
               <a
-                href={`${getBasePath()}/resume.pdf`}
+                href={RESUME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 rounded border border-primary text-primary font-mono text-sm hover:bg-primary/10 transition-colors text-center"
