@@ -123,8 +123,8 @@ export const Hero = () => {
                 transition={{ delay: 0.5 }}
               >
                 <span className="syntax-comment">{"// "}</span>
-                Senior @ NYU Abu Dhabi · CS Major, Applied Math Minor ·
-                Graduating May 2026
+                Fresh Graduate @ NYU Abu Dhabi · CS Major, Applied Math Minor ·
+                Graduated
               </motion.p>
 
               <motion.p
