@@ -55,9 +55,6 @@ export const enContent: SiteContent = {
       "Most recently, I was a Research Assistant at the eBRAIN Lab at NYU Abu Dhabi, researching security and vulnerabilities in audio language models on HPC clusters and mechanistic interpretability for jailbreak defense. I am also the co-founder of Brainlot, an iOS application with over 1,000 downloads that transforms documents into an infinite stream of interactive, gamified quizzes using LLMs — selected for the NYUAD startup incubator. My industry experience includes Software Engineering at XBTO Trading in New York (real-time performance monitoring with Prometheus and Grafana, Oracle data pipeline engineering for cryptocurrency markets); Full Stack at Swop Holdings in Dubai (migrating core infrastructure from Firebase to AWS and contributing to product vision at pre-seed stage); Software Engineering at Liwa Capital (LLM-powered email processing and personalized data pipelines with Microsoft APIs); and Backend at IT BAND in South Korea (renovating the Korea Maritime Transportation Safety Authority website with Java Spring).",
       "Beyond industry work, I build side projects — from social platforms like Foodify (trending restaurants) and ML models like DeepGenre (movie genre classifier from movie posters), to desktop tools like SenseFit (cursor sensitivity optimization with 90%+ test coverage). I am always eager to tackle complex problems with code and learn new technologies.",
     ],
-    toolkitLabel: "Technical toolkit:",
-    toolkitBody:
-      "Python, C++, Java, JavaScript, PyTorch, AWS, React, Node.js, Prometheus, Grafana, Docker, HPC, FlutterFlow, MATLAB, and more. Feel free to contact me!",
     educationTitle: "Education",
     educationSchool: "New York University Abu Dhabi (NYUAD)",
     educationDegree:

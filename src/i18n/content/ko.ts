@@ -56,15 +56,13 @@ export const koContent: SiteContent = {
       "산업 현장에서는 뉴욕 XBTO Trading의 소프트웨어 엔지니어(Prometheus 및 Grafana를 활용한 실시간 성능 모니터링, 가상자산 시장을 위한 Oracle 데이터 파이프라인 엔지니어링), 두바이 Swop Holdings의 풀스택 개발자(핵심 인프라의 Firebase→AWS 이전 및 프리시드 단계의 제품 비전 기여), Liwa Capital의 소프트웨어 엔지니어(LLM 기반 이메일 처리 및 Microsoft API 활용 맞춤형 데이터 파이프라인 구축), 한국 IT BAND의 백엔드 개발자(Java Spring을 활용한 한국해양교통안전공단 웹사이트 리뉴얼)로 참여하며 역량을 다졌습니다.",
       "실무 외에도 실시간 인기 맛집 찾기 플랫폼 'Foodify', 영화 포스터 기반 장르 분류 ML 모델 'DeepGenre', 90% 이상의 테스트 커버리지를 갖춘 커서 감도 최적화 데스크톱 툴 'SenseFit' 등 다양한 사이드 프로젝트를 지속적으로 개발해 왔습니다. 복잡한 문제를 코드 연구로 해결하고 새로운 기술을 습득하는 과정 자체를 언제나 즐깁니다.",
     ],
-    toolkitLabel: "주요 기술 스택:",
-    toolkitBody:
-      "Python, C++, Java, JavaScript, PyTorch, AWS, React, Node.js, Prometheus, Grafana, Docker, HPC, FlutterFlow, MATLAB 등.",
     educationTitle: "학력",
-    educationSchool: "뉴욕대학교 아부다비 (NYUAD)",
-    educationDegree: "이학사 · 컴퓨터공학 전공 · 응용수학 부전공",
-    educationDetails: "2020 – 2026 · 2026년 5월 졸업 · 학점 3.7 / 4.0 · 아부다비, UAE",
+    educationSchool: "뉴욕대학교 아부다비 (NYU Abu Dhabi)",
+    educationDegree: "이학사 (B.S.) · 컴퓨터공학 전공 · 응용수학 부전공",
+    educationDetails:
+      "2020년 – 2026년 · 2026년 5월 졸업 · 학점: 3.7 / 4.0 · 아랍에미리트 아부다비",
     educationCoursework:
-      "주요 수강 과목: 머신러닝, 자료구조, 알고리즘, 컴퓨터 비전, 컴퓨터 네트워크, 소프트웨어 공학, 운영체제 등",
+      "주요 이수 과목: 머신러닝, 자료구조, 알고리즘, 컴퓨터 비전, 컴퓨터 네트워크, 소프트웨어 공학, 운영체제 등",
     statYearsCoding: "코딩 경력",
     statProjects: "프로젝트",
     statResearch: "연구",

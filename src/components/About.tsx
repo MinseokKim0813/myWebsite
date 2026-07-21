@@ -13,7 +13,9 @@ export const About = () => {
   const locale = useLocale();
   const t = getUi(locale);
   const c = getContent(locale).about;
-  const publicationCount = getContent(locale).research.publications.length;
+  const research = getContent(locale).research;
+  const researchCount =
+    research.publications.length + (research.current ? 1 : 0);
 
   return (
     <section id="about" className="py-24 relative">
@@ -51,10 +53,6 @@ export const About = () => {
                     {paragraph}
                   </p>
                 ))}
-                <p className="text-muted-foreground leading-relaxed mt-4">
-                  <strong className="text-foreground">{c.toolkitLabel}</strong>{" "}
-                  {c.toolkitBody}
-                </p>
               </div>
 
               <div className="bg-card border border-border rounded-lg p-4 card-hover">
@@ -94,7 +92,7 @@ export const About = () => {
                 </div>
                 <div className="bg-card border border-border rounded-lg p-4 text-center card-hover">
                   <p className="text-3xl font-bold text-syntax-string">
-                    {publicationCount}
+                    {researchCount}
                   </p>
                   <p className="text-sm text-muted-foreground">{c.statResearch}</p>
                 </div>

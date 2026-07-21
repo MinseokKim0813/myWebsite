@@ -44,8 +44,6 @@ export type SiteContent = {
   about: {
     bioComment: string;
     bioParagraphs: string[];
-    toolkitLabel: string;
-    toolkitBody: string;
     educationTitle: string;
     educationSchool: string;
     educationDegree: string;
