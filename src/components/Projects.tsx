@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import { useLocale } from "@/i18n/locale";
+import { getUi } from "@/i18n/ui";
 
 const featuredProjects = [
   {
@@ -134,6 +136,7 @@ const gradientClasses: Record<string, string> = {
 };
 
 export const Projects = () => {
+  const t = getUi(useLocale());
   const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
 
   return (
@@ -149,7 +152,7 @@ export const Projects = () => {
           {/* Section header */}
           <div className="flex items-center gap-4 mb-12">
             <span className="text-primary font-mono">02.</span>
-            <h2 className="text-3xl md:text-4xl font-bold">Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">{t.sections.projects}</h2>
             <div className="flex-1 h-px bg-border" />
           </div>
 

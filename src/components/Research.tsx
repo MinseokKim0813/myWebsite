@@ -7,6 +7,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useLocale } from "@/i18n/locale";
+import { getUi } from "@/i18n/ui";
 
 const getGoogleDriveFileId = (url: string) =>
   url.match(/\/d\/([^/]+)/)?.[1] ?? null;
@@ -20,9 +22,11 @@ const getDrivePreviewUrl = (fileId: string) =>
 const ResearchPreviewBox = ({
   link,
   label,
+  openLabel,
 }: {
   link: string;
   label: string;
+  openLabel: string;
 }) => {
   const fileId = getGoogleDriveFileId(link);
   const [thumbnailError, setThumbnailError] = useState(false);
@@ -69,7 +73,7 @@ const ResearchPreviewBox = ({
         aria-label="Open paper"
       >
         <ExternalLink className="h-4 w-4" />
-        <span className="font-mono text-xs">Open</span>
+        <span className="font-mono text-xs">{openLabel}</span>
       </a>
     </div>
   );
@@ -146,6 +150,8 @@ const researchInterests = [
 ];
 
 export const Research = () => {
+  const t = getUi(useLocale());
+
   return (
     <section id="research" className="py-24">
       <div className="container mx-auto px-6">
@@ -159,7 +165,7 @@ export const Research = () => {
           {/* Section header */}
           <div className="flex items-center gap-4 mb-12">
             <span className="text-primary font-mono">03.</span>
-            <h2 className="text-3xl md:text-4xl font-bold">Research</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">{t.sections.research}</h2>
             <div className="flex-1 h-px bg-border" />
           </div>
 
@@ -191,7 +197,7 @@ export const Research = () => {
           <div>
             <h3 className="text-2xl font-bold mb-8 font-mono">
               <span className="syntax-comment">{"// "}</span>
-              Research
+              {t.sections.researchSub}
             </h3>
             <div className="space-y-6">
               {/* eBRAIN Lab — first under // Research */}
@@ -236,6 +242,7 @@ export const Research = () => {
                 <ResearchPreviewBox
                   link={currentResearchActivity.link}
                   label={`${currentResearchActivity.lab}: ${currentResearchActivity.topic}`}
+                  openLabel={t.sections.previewOpen}
                 />
               </motion.article>
               {publications.map((pub, index) => (
@@ -283,7 +290,11 @@ export const Research = () => {
                       </p>
                     </div>
                   </div>
-                  <ResearchPreviewBox link={pub.link} label={pub.title} />
+                  <ResearchPreviewBox
+                    link={pub.link}
+                    label={pub.title}
+                    openLabel={t.sections.previewOpen}
+                  />
                 </motion.article>
               ))}
             </div>

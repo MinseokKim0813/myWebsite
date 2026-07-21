@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useLocale } from "@/i18n/locale";
+import { getUi } from "@/i18n/ui";
 
 const experiences = [
   {
@@ -59,6 +61,7 @@ const experiences = [
 ];
 
 export const Experience = () => {
+  const t = getUi(useLocale());
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -74,7 +77,7 @@ export const Experience = () => {
           {/* Section header */}
           <div className="flex items-center gap-4 mb-12">
             <span className="text-primary font-mono">04.</span>
-            <h2 className="text-3xl md:text-4xl font-bold">Experience</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">{t.sections.experience}</h2>
             <div className="flex-1 h-px bg-border" />
           </div>
 

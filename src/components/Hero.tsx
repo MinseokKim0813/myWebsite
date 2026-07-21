@@ -1,19 +1,22 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
-
-const roles = [
-  "Data Science",
-  "Data Engineering",
-  "Backend",
-  "Machine Learning",
-  "Software Engineering",
-];
+import { useLocale } from "@/i18n/locale";
+import { getUi } from "@/i18n/ui";
 
 export const Hero = () => {
+  const locale = useLocale();
+  const t = getUi(locale);
+  const roles = t.roles;
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    setCurrentRole(0);
+    setDisplayText("");
+    setIsDeleting(false);
+  }, [locale]);
 
   useEffect(() => {
     const role = roles[currentRole];
@@ -38,7 +41,7 @@ export const Hero = () => {
     );
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentRole]);
+  }, [displayText, isDeleting, currentRole, roles]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid">
@@ -84,9 +87,7 @@ export const Hero = () => {
           >
             <div className="font-mono space-y-4">
               <p className="text-muted-foreground">
-                <span className="syntax-comment">
-                  {"// Welcome to my portfolio"}
-                </span>
+                <span className="syntax-comment">{t.hero.welcome}</span>
               </p>
 
               <p>
@@ -103,7 +104,7 @@ export const Hero = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <span className="text-foreground">Hello, I'm </span>
+                  <span className="text-foreground">{t.hero.greeting}</span>
                   <span className="text-gradient">Minseok</span>
                 </motion.h1>
               </div>
@@ -123,8 +124,7 @@ export const Hero = () => {
                 transition={{ delay: 0.5 }}
               >
                 <span className="syntax-comment">{"// "}</span>
-                Fresh Graduate @ NYU Abu Dhabi · CS Major, Applied Math Minor ·
-                Graduated May 2026
+                {t.hero.subtitle}
               </motion.p>
 
               <motion.p
@@ -133,12 +133,7 @@ export const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                I'm passionate about systems that scale and integrating data and
-                AI into practical software solutions. Currently I'm especially
-                interested in data and machine learning: problems where data,
-                infrastructure, and intelligent automation meet. I enjoy
-                building end-to-end solutions. Always open to new challenges and
-                collaborations!
+                {t.hero.bio}
               </motion.p>
 
               {/* Social links */}

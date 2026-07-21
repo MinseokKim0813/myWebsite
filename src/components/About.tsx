@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Code2, Database, Brain, Terminal, GraduationCap } from "lucide-react";
 import { publications } from "./Research";
+import { useLocale } from "@/i18n/locale";
+import { getUi } from "@/i18n/ui";
 
 const skills = [
   {
@@ -65,6 +67,8 @@ const CODING_START_YEAR = 2018;
 const yearsCoding = new Date().getFullYear() - CODING_START_YEAR;
 
 export const About = () => {
+  const t = getUi(useLocale());
+
   return (
     <section id="about" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -78,7 +82,7 @@ export const About = () => {
           {/* Section header */}
           <div className="flex items-center gap-4 mb-12">
             <span className="text-primary font-mono">01.</span>
-            <h2 className="text-3xl md:text-4xl font-bold">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">{t.sections.about}</h2>
             <div className="flex-1 h-px bg-border" />
           </div>
 

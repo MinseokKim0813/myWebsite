@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send } from "lucide-react";
 import { Button } from "./ui/button";
+import { useLocale } from "@/i18n/locale";
+import { getUi } from "@/i18n/ui";
 
 export const Contact = () => {
+  const t = getUi(useLocale());
+
   return (
     <section id="contact" className="py-24">
       <div className="container mx-auto px-6">
@@ -14,12 +18,13 @@ export const Contact = () => {
           className="max-w-2xl mx-auto text-center"
         >
           {/* Section header */}
-          <p className="text-primary font-mono mb-4">05. What's Next?</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h2>
+          <p className="text-primary font-mono mb-4">{t.sections.contactLabel}</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            {t.sections.contactTitle}
+          </h2>
 
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-            I'm currently looking for new opportunities and collaborations. Whether you have a 
-            question, want to discuss research, or just want to say hi, my inbox is always open!
+            {t.sections.contactBody}
           </p>
 
           {/* Contact info */}
@@ -49,7 +54,7 @@ export const Contact = () => {
             >
               <a href="mailto:mk7545@nyu.edu">
                 <Send className="w-5 h-5 mr-2" />
-                Say Hello
+                {t.sections.sayHello}
               </a>
             </Button>
           </motion.div>

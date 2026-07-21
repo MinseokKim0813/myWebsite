@@ -1,20 +1,28 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useLocale } from "@/i18n/locale";
+import { getUi } from "@/i18n/ui";
+
 const RESUME_URL =
   "https://drive.google.com/file/d/1JYLwCgQXIxnombX1RKIk-zXI8yjOU5_U/view";
 
-const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Research", href: "#research" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
-];
-
 export const Navbar = () => {
+  const locale = useLocale();
+  const t = getUi(locale);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: t.nav.about, href: "#about" },
+    { name: t.nav.projects, href: "#projects" },
+    { name: t.nav.research, href: "#research" },
+    { name: t.nav.experience, href: "#experience" },
+    { name: t.nav.contact, href: "#contact" },
+  ];
+
+  const languagePath = locale === "en" ? "/ko" : "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,18 +43,16 @@ export const Navbar = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <Link to={locale === "ko" ? "/ko" : "/"} className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <span className="font-mono font-bold text-primary">&lt;/&gt;</span>
             </div>
-          </a>
+          </Link>
 
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link, index) => (
               <motion.a
-                key={link.name}
+                key={link.href}
                 href={link.href}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -56,20 +62,30 @@ export const Navbar = () => {
                 <span className="text-primary">0{index + 1}.</span> {link.name}
               </motion.a>
             ))}
-            <motion.a
-              href={RESUME_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="px-4 py-2 rounded border border-primary text-primary font-mono text-sm hover:bg-primary/10 transition-colors"
+              transition={{ delay: 0.55 }}
+              className="flex items-center gap-2"
             >
-              Resume
-            </motion.a>
+              <Link
+                to={languagePath}
+                className="px-3 py-2 rounded border border-border text-muted-foreground font-mono text-sm hover:text-primary hover:border-primary transition-colors"
+                aria-label={t.languageSwitchAria}
+              >
+                {t.languageSwitch}
+              </Link>
+              <a
+                href={RESUME_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded border border-primary text-primary font-mono text-sm hover:bg-primary/10 transition-colors"
+              >
+                {t.resume}
+              </a>
+            </motion.div>
           </div>
 
-          {/* Mobile menu button */}
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -79,7 +95,6 @@ export const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -90,7 +105,7 @@ export const Navbar = () => {
             <div className="flex flex-col gap-4">
               {navLinks.map((link, index) => (
                 <a
-                  key={link.name}
+                  key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -98,13 +113,20 @@ export const Navbar = () => {
                   <span className="text-primary">0{index + 1}.</span> {link.name}
                 </a>
               ))}
+              <Link
+                to={languagePath}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="inline-block px-4 py-2 rounded border border-border text-muted-foreground font-mono text-sm hover:text-primary text-center"
+              >
+                {t.languageSwitch}
+              </Link>
               <a
                 href={RESUME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 rounded border border-primary text-primary font-mono text-sm hover:bg-primary/10 transition-colors text-center"
               >
-                Resume
+                {t.resume}
               </a>
             </div>
           </motion.div>

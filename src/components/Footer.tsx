@@ -1,4 +1,6 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { useLocale } from "@/i18n/locale";
+import { getUi } from "@/i18n/ui";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/MinseokKim0813", label: "GitHub" },
@@ -7,6 +9,8 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
+  const t = getUi(useLocale());
+
   return (
     <footer className="py-8 border-t border-border">
       <div className="container mx-auto px-6">
@@ -30,7 +34,8 @@ export const Footer = () => {
           {/* Credits */}
           <div className="font-mono text-sm text-muted-foreground text-center">
             <p className="flex items-center justify-center gap-1">
-              Built with <Heart className="w-4 h-4 text-destructive" /> and lots of{" "}
+              {t.footer.built} <Heart className="w-4 h-4 text-destructive" />{" "}
+              {t.footer.and}{" "}
               <span className="text-primary">{"<code/>"}</span>
             </p>
           </div>
