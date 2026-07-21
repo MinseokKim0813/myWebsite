@@ -5,12 +5,21 @@ import { Link } from "react-router-dom";
 import { useLocale } from "@/i18n/locale";
 import { getUi } from "@/i18n/ui";
 
-const RESUME_URL =
-  "https://drive.google.com/file/d/1JYLwCgQXIxnombX1RKIk-zXI8yjOU5_U/view";
+const RESUME_URLS = {
+  en: "https://drive.google.com/file/d/1JYLwCgQXIxnombX1RKIk-zXI8yjOU5_U/view",
+  ko: "https://drive.google.com/file/d/1meXqIIdIST53wYlKzIyYSusRQPcy0WoH/view",
+} as const;
+
+const COVER_LETTER_URL =
+  "https://drive.google.com/file/d/1CJeZD5ApmRodjdpXXTuz8wmGSSJoWizg/view";
+
+const buttonClass =
+  "px-4 py-2 rounded border border-primary text-primary font-mono text-sm hover:bg-primary/10 transition-colors";
 
 export const Navbar = () => {
   const locale = useLocale();
   const t = getUi(locale);
+  const resumeUrl = RESUME_URLS[locale];
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -76,13 +85,23 @@ export const Navbar = () => {
                 {t.languageSwitch}
               </Link>
               <a
-                href={RESUME_URL}
+                href={resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded border border-primary text-primary font-mono text-sm hover:bg-primary/10 transition-colors"
+                className={buttonClass}
               >
                 {t.resume}
               </a>
+              {locale === "ko" && (
+                <a
+                  href={COVER_LETTER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonClass}
+                >
+                  자기소개서
+                </a>
+              )}
             </motion.div>
           </div>
 
@@ -121,13 +140,23 @@ export const Navbar = () => {
                 {t.languageSwitch}
               </Link>
               <a
-                href={RESUME_URL}
+                href={resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 rounded border border-primary text-primary font-mono text-sm hover:bg-primary/10 transition-colors text-center"
+                className={`inline-block text-center ${buttonClass}`}
               >
                 {t.resume}
               </a>
+              {locale === "ko" && (
+                <a
+                  href={COVER_LETTER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-block text-center ${buttonClass}`}
+                >
+                  자기소개서
+                </a>
+              )}
             </div>
           </motion.div>
         )}

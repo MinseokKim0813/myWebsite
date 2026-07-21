@@ -53,7 +53,7 @@ export const koContent: SiteContent = {
     bioParagraphs: [
       "2026년 5월 NYU Abu Dhabi에서 컴퓨터공학 학사 및 응용수학 부전공(GPA: 3.7/4.0)으로 졸업했습니다. 확장 가능한 시스템 구축과 데이터 및 AI를 실용적인 소프트웨어 솔루션에 녹여내는 일에 열정을 가지고 있으며, 데이터 엔지니어링, 백엔드 개발, 머신러닝에 이르는 다양한 영역에서 경험을 쌓아왔습니다.",
       "가장 최근에는 NYUAD eBRAIN Lab의 연구원(Research Assistant)으로서 HPC 클러스터 기반 오디오 언어 모델의 보안 및 취약점 연구, 그리고 탈옥(Jailbreak) 방어를 위한 매커니즘 해석가능성(Mechanistic Interpretability) 연구를 진행했습니다. 또한, LLM을 활용해 문서를 무제한의 대화형 게임식 퀴즈로 변환해 주는 iOS 애플리케이션 'Brainlot'의 공동 창업자이기도 합니다. Brainlot은 1,000회 이상의 다운로드를 기록하며 NYUAD 스타트업 인큐베이터에 선정되었습니다.",
-      "산업 현장에서는 뉴욕 XBTO Trading의 소프트웨어 엔지니어(Prometheus 및 Grafana를 활용한 실시간 성능 모니터링, 가상자산 시장을 위한 Oracle 데이터 파이프라인 엔지니어링), 두바이 Swop Holdings의 풀스택 개발자(핵심 인프라의 Firebase→AWS 이전 및 프리시드 단계의 제품 비전 기여), Liwa Capital의 소프트웨어 엔지니어(LLM 기반 이메일 처리 및 Microsoft API 활용 맞춤형 데이터 파이프라인 구축), 한국 IT BAND의 백엔드 개발자(Java Spring을 활용한 한국해양교통안전공단 웹사이트 리뉴얼)로 참여하며 역량을 다졌습니다.",
+      "실무에서는 뉴욕 XBTO Trading의 소프트웨어 엔지니어(Prometheus 및 Grafana를 활용한 실시간 성능 모니터링, 가상자산 시장을 위한 Oracle 데이터 파이프라인 엔지니어링), 두바이 Swop Holdings의 풀스택 개발자(핵심 인프라의 Firebase→AWS 이전 및 프리시드 단계의 제품 비전 기여), Liwa Capital의 소프트웨어 엔지니어(LLM 기반 이메일 처리 및 Microsoft API 활용 맞춤형 데이터 파이프라인 구축), 한국 IT BAND의 백엔드 개발자(Java Spring을 활용한 한국해양교통안전공단 웹사이트 리뉴얼)로 참여하며 역량을 다졌습니다.",
       "실무 외에도 실시간 인기 맛집 찾기 플랫폼 'Foodify', 영화 포스터 기반 장르 분류 ML 모델 'DeepGenre', 90% 이상의 테스트 커버리지를 갖춘 커서 감도 최적화 데스크톱 툴 'SenseFit' 등 다양한 사이드 프로젝트를 지속적으로 개발해 왔습니다. 복잡한 문제를 코드 연구로 해결하고 새로운 기술을 습득하는 과정 자체를 언제나 즐깁니다.",
     ],
     educationTitle: "학력",

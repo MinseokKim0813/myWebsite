@@ -59,7 +59,7 @@ export const ui = {
     languageSwitchAria: "영문 버전으로 이동",
     hero: {
       welcome: "// 김민석의 포트폴리오에 오신 것을 환영해요!",
-      greeting: "안녕하세요, ",
+      greeting: "",
       greetingAfter: "입니다",
       subtitle:
         "NYU Abu Dhabi (뉴욕대학교 아부다비) 신입 졸업생 – 컴퓨터공학 전공, 응용수학 부전공 (2026년 5월 졸업)",
