@@ -3,6 +3,16 @@ import { useState } from "react";
 
 const experiences = [
   {
+    company: "eBRAIN Lab",
+    role: "Research Assistant",
+    period: "Jan 2026 - Jul 2026",
+    location: "Abu Dhabi, UAE",
+    description: [
+      "Conducted research on security mechanisms and vulnerabilities of large Audio Language Models (ALMs) utilizing HPC clusters.",
+      "Analyzed internal vectors, applying mechanistic interpretability to identify specific security vulnerabilities that trigger jailbreak attacks.",
+    ],
+  },
+  {
     company: "XBTO Trading",
     role: "Software Engineering Intern",
     period: "Jun 2025 - Aug 2025",

@@ -79,6 +79,7 @@ const currentResearchActivity = {
   role: "Research Assistant",
   lab: "eBRAIN Lab",
   institution: "NYU Abu Dhabi",
+  period: "Jan 2026 – Jul 2026",
   topic: "LLM Jailbreak Security",
   summary:
     "We study how harmful instructions hidden in audio can trick speech-AI models, and where those attacks take effect inside the model. Jailbreak signals concentrate in mid-to-upper mel bands and at architecture-specific decoder depths; cross-model transfer fails yet exposes per-band asymmetry, informing band-region suppression and layer-level monitoring as defenses.",
@@ -215,7 +216,8 @@ export const Research = () => {
                     </h4>
                     <p className="mt-1 text-sm text-foreground">
                       {currentResearchActivity.role} at{" "}
-                      {currentResearchActivity.institution}
+                      {currentResearchActivity.institution} ·{" "}
+                      {currentResearchActivity.period}
                     </p>
                     <p className="mt-3 text-sm text-foreground">
                       {currentResearchActivity.summary}

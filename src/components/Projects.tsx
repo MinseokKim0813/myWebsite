@@ -6,11 +6,11 @@ const featuredProjects = [
   {
     title: "Brainlot",
     subtitle: "Infinite Scroll Learning Platform",
-    tech: ["Backend", "Mobile App", "Typescript", "Database"],
+    tech: ["Backend", "Mobile App", "Database"],
     highlights: [
-      "Co-founded and launched an iOS application with over 300 downloads, featuring an infinite vertical scrolling interface that automatically transforms user-uploaded documents into a continuous stream of interactive, gamified multiple choice quizzes.",
+      "Co-founded and launched an iOS application with over 1,000 downloads, featuring an infinite vertical scrolling interface that automatically transforms user-uploaded documents into a continuous stream of interactive, gamified multiple choice quizzes.",
       "Engineered the endless quizz generation pipeline in the background to support continuous scrolling, alongside a flexible inference architecture that allows users to toggle between cloud-based and offline local LLMs.",
-      "Selected for the university startup incubator to accelerate product growth with professional guidance, validating the platform's potential and uniqueness in the market.",
+      "Selected for the NYUAD startup incubator to accelerate product growth with professional guidance, validating the platform's potential and uniqueness in the market.",
     ],
     github: undefined,
     external: "https://apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB",
@@ -31,7 +31,7 @@ const featuredProjects = [
     highlights: [
       "Built a social platform where users can swipe to discover trending restaurants, like and share lists, and explore popular recommendations.",
       "Made it easy for users to connect over shared taste while helping small businesses get discovered through social media-like experience.",
-      "Built the frontend with React, scraped data from Yelp and Google Maps, and managed the data using Firebase.",
+      "Scraped data from Yelp and Google Maps, and managed the data using Firebase.",
     ],
     github: undefined,
     external: "https://foodify.cc",

@@ -8,49 +8,55 @@ const skills = [
     items: [
       "Python",
       "C++",
-      "SQL",
       "C",
-      "JavaScript",
       "Java",
+      "JavaScript",
       "Assembly",
-      "Regex",
+      "SQL",
       "HTML",
       "CSS",
       "YAML",
+      "RegEx",
     ],
     icon: Code2,
   },
   {
     category: "Frameworks & Tools",
     items: [
-      "Figma",
-      "Git",
+      "PyTorch",
       "React",
       "Node.js",
-      "Grafana",
-      "Wireshark",
-      "FlutterFlow",
-      "Prometheus",
       "Express",
       "Spring",
       "Flask",
-      "REST APIs",
       "FastAPI",
-      "PyTorch",
       "pytest",
       "Selenium",
+      "NumPy",
+      "Pandas",
+      "asyncio",
+      "REST APIs",
+      "Prometheus",
+      "Grafana",
+      "Docker",
+      "Git",
+      "GitHub",
+      "GitLab",
       "MATLAB",
+      "Figma",
+      "FlutterFlow",
+      "Wireshark",
     ],
     icon: Terminal,
   },
   {
     category: "Databases & Infra",
-    items: ["AWS RDS", "MongoDB", "Firebase", "Prometheus"],
+    items: ["AWS RDS", "Firebase", "MongoDB", "HPC", "ArgoCD"],
     icon: Database,
   },
   {
     category: "AI/ML",
-    items: ["PyTorch", "LLMs", "Computer Vision", "NLP", "MLLMs"],
+    items: ["LLMs", "Computer Vision", "NLP", "Mechanistic Interpretability"],
     icon: Brain,
   },
 ];
@@ -90,37 +96,41 @@ export const About = () => {
                   <span className="syntax-comment">{"/* Bio */"}</span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I am a Computer Science major and Applied Mathematics minor at
-                  NYU Abu Dhabi (Class of 2026, GPA: 3.71) with a passion for
-                  building scalable systems and integrating data and AI into
-                  practical software solutions. My journey spans data
-                  engineering, backend development, and machine learning.
+                  I graduated from NYU Abu Dhabi in May 2026 with a B.S. in
+                  Computer Science and a minor in Applied Mathematics (GPA:
+                  3.7/4.0). I am passionate about building scalable systems and
+                  integrating data and AI into practical software solutions. My
+                  journey spans data engineering, backend development, and
+                  machine learning.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Currently, I am a{" "}
+                  Most recently, I was a{" "}
                   <strong className="text-foreground">
                     Research Assistant
                   </strong>{" "}
-                  at the eBRAIN Lab at NYU Abu Dhabi, working on LLM Jailbreak
-                  Security research with a focus on multimodal LLMs (MLLMs). I
-                  am also the co-founder of Brainlot, an iOS application with
-                  over 400 downloads that transforms documents into an infinite
-                  stream of interactive, gamified quizzes using LLMs - selected
+                  at the eBRAIN Lab at NYU Abu Dhabi, researching security and
+                  vulnerabilities in audio language models on HPC clusters and
+                  mechanistic interpretability for jailbreak defense. I am also
+                  the co-founder of Brainlot, an iOS application with over
+                  1,000 downloads that transforms documents into an infinite
+                  stream of interactive, gamified quizzes using LLMs—selected
                   for the NYUAD startup incubator. My industry experience
                   includes:{" "}
                   <strong className="text-foreground">
                     Software Engineering
                   </strong>{" "}
                   at XBTO Trading in New York (real-time performance monitoring
-                  with Prometheus and Grafana, data pipeline engineering for
-                  cryptocurrency);{" "}
+                  with Prometheus and Grafana, Oracle data pipeline
+                  engineering for cryptocurrency markets);{" "}
                   <strong className="text-foreground">Full Stack</strong> at
-                  Swop Holdings in Dubai (migrating core database infrastructure
-                  from Firebase to AWS RDS and contributing directly to the
-                  product vision at pre-seed stage);{" "}
-                  <strong className="text-foreground">AI Integration</strong> at
-                  Liwa Capital (AI-powered email processing with LLMs and
-                  increased team productivity ); and{" "}
+                  Swop Holdings in Dubai (migrating core infrastructure from
+                  Firebase to AWS and contributing to product vision at
+                  pre-seed stage);{" "}
+                  <strong className="text-foreground">
+                    Software Engineering
+                  </strong>{" "}
+                  at Liwa Capital (LLM-powered email processing and
+                  personalized data pipelines with Microsoft APIs); and{" "}
                   <strong className="text-foreground">Backend</strong> at IT
                   BAND in South Korea (renovating the Korea Maritime
                   Transportation Safety Authority website with Java Spring).
@@ -137,9 +147,9 @@ export const About = () => {
                   <strong className="text-foreground">
                     Technical toolkit:
                   </strong>{" "}
-                  Python, C++, SQL, C, Java, JavaScript, PyTorch, AWS, React,
-                  Node.js, Prometheus, Grafana, FlutterFlow, MATLAB, and more.
-                  Feel free to contact me!
+                  Python, C++, Java, JavaScript, PyTorch, AWS, React, Node.js,
+                  Prometheus, Grafana, Docker, HPC, FlutterFlow, MATLAB, and
+                  more. Feel free to contact me!
                 </p>
               </div>
 
@@ -159,7 +169,14 @@ export const About = () => {
                   Bachelor of Science · Major in Computer Science · Minor in
                   Applied Mathematics
                   <br />
-                  Senior · Graduation Expected May 2026 · GPA: 3.71 / 4.0 · UAE
+                  2020 – 2026 · Graduated May 2026 · GPA: 3.7 / 4.0 · Abu
+                  Dhabi, UAE
+                  <br />
+                  <span className="text-muted-foreground/90">
+                    Relevant coursework: Machine Learning, Data Structures,
+                    Algorithms, Computer Vision, Computer Networks, Software
+                    Engineering, Operating Systems, and more.
+                  </span>
                 </p>
               </div>
 

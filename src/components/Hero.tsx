@@ -124,7 +124,7 @@ export const Hero = () => {
               >
                 <span className="syntax-comment">{"// "}</span>
                 Fresh Graduate @ NYU Abu Dhabi · CS Major, Applied Math Minor ·
-                Graduated
+                Graduated May 2026
               </motion.p>
 
               <motion.p
