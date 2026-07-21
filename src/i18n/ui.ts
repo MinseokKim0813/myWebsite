@@ -89,6 +89,6 @@ export const ui = {
   },
 } as const;
 
-export type UiStrings = (typeof ui)["en"];
+export type UiStrings = (typeof ui)[Locale];
 
 export const getUi = (locale: Locale): UiStrings => ui[locale];
