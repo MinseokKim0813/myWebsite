@@ -83,6 +83,15 @@ const currentResearchActivity = {
   topic: "LLM Jailbreak Security",
   summary:
     "We study how harmful instructions hidden in audio can trick speech-AI models, and where those attacks take effect inside the model. Jailbreak signals concentrate in mid-to-upper mel bands and at architecture-specific decoder depths; cross-model transfer fails yet exposes per-band asymmetry, informing band-region suppression and layer-level monitoring as defenses.",
+  authors: [
+    "Boyuan Chen [NYU]",
+    "Sohaila Abdulsattar [NYU]",
+    "Minseok Kim [NYU]",
+    "Minghao Shao [NYU]",
+    "Siddharth Garg [NYU]",
+    "Ramesh Karri [NYU]",
+    "Muhammad Shafique [NYU]",
+  ],
   link: "https://drive.google.com/file/d/1ezMtR8nA6skwas9sc-OCNCWq0IyQkjkH/view",
 };
 
@@ -200,9 +209,6 @@ export const Research = () => {
                     </div>
                   </div>
                   <div className="min-w-0 flex-1">
-                    <span className="mb-2 inline-block rounded bg-primary/10 px-2 py-1 font-mono text-xs text-primary">
-                      Current
-                    </span>
                     <h4 className="text-lg font-bold text-primary transition-colors group-hover:text-primary">
                       <a
                         href={currentResearchActivity.link}
@@ -218,6 +224,9 @@ export const Research = () => {
                       {currentResearchActivity.role} at{" "}
                       {currentResearchActivity.institution} ·{" "}
                       {currentResearchActivity.period}
+                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      {currentResearchActivity.authors.join(", ")}
                     </p>
                     <p className="mt-3 text-sm text-foreground">
                       {currentResearchActivity.summary}

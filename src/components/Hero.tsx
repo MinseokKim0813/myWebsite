@@ -134,7 +134,7 @@ export const Hero = () => {
                 transition={{ delay: 0.6 }}
               >
                 I'm passionate about systems that scale and integrating data and
-                AI into practical software solutions. Right now I'm especially
+                AI into practical software solutions. Currently I'm especially
                 interested in data and machine learning: problems where data,
                 infrastructure, and intelligent automation meet. I enjoy
                 building end-to-end solutions. Always open to new challenges and
