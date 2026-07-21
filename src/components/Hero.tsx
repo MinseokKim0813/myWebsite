@@ -108,6 +108,12 @@ export const Hero = () => {
                 >
                   <span className="text-foreground">{t.hero.greeting}</span>
                   <span className="text-gradient">{nameGiven}</span>
+                  {t.hero.greetingAfter && (
+                    <span className="text-foreground">
+                      {" "}
+                      {t.hero.greetingAfter}
+                    </span>
+                  )}
                 </motion.h1>
               </div>
 

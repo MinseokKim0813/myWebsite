@@ -15,6 +15,7 @@ export const ui = {
     hero: {
       welcome: "// Welcome to my portfolio",
       greeting: "Hello, I'm ",
+      greetingAfter: "",
       subtitle:
         "Fresh Graduate @ NYU Abu Dhabi · CS Major, Applied Math Minor · Graduated May 2026",
       bio: "I'm passionate about systems that scale and integrating data and AI into practical software solutions. Currently I'm especially interested in data and machine learning: problems where data, infrastructure, and intelligent automation meet. I enjoy building end-to-end solutions. Always open to new challenges and collaborations!",
@@ -57,11 +58,12 @@ export const ui = {
     languageSwitch: "English",
     languageSwitchAria: "영문 버전으로 이동",
     hero: {
-      welcome: "// 포트폴리오에 오신 것을 환영합니다",
+      welcome: "// 김민석의 포트폴리오에 오신 것을 환영해요!",
       greeting: "안녕하세요, ",
+      greetingAfter: "입니다",
       subtitle:
-        "NYU 아부다비 졸업 · 컴퓨터과학 전공 · 응용수학 부전공 · 2026년 5월 졸업",
-      bio: "확장 가능한 시스템을 만들고, 데이터와 AI를 실무 소프트웨어로 연결하는 일에 관심이 있습니다. 지금은 데이터·인프라·지능형 자동화가 맞닿는 데이터/ML 문제에 특히 몰두하고 있습니다. 처음부터 끝까지 직접 만드는 것을 좋아하며, 새로운 도전과 협업을 환영합니다.",
+        "NYU Abu Dhabi (뉴욕대학교 아부다비) 신입 졸업생 – 컴퓨터공학 전공, 응용수학 부전공 (2026년 5월 졸업)",
+      bio: "확장 가능한 시스템 구축과 데이터 및 AI를 실용적인 소프트웨어 솔루션에 녹여내는 일에 열정을 가지고 있습니다. 최근에는 데이터, 인프라, 그리고 지능형 자동화가 맞물리는 데이터 및 머신러닝 분야에 깊은 관심을 두고 있습니다. 엔드투엔드(End-to-End) 솔루션을 개발하는 과정을 즐기며, 언제나 새로운 도전과 협업을 환영합니다!",
     },
     roles: [
       "데이터 사이언스",

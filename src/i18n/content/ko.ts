@@ -46,21 +46,22 @@ const skillItems = {
 export const koContent: SiteContent = {
   hero: {
     nameFull: "김민석",
-    nameGiven: "민석",
+    nameGiven: "김민석",
   },
   about: {
-    bioComment: "/* 소개 */",
+    bioComment: "/* 약력 */",
     bioParagraphs: [
-      "2026년 5월 뉴욕대학교 아부다비(NYUAD)에서 컴퓨터과학 학사와 응용수학 부전공을 마쳤습니다(학점 3.7/4.0). 확장 가능한 시스템을 만들고, 데이터와 AI를 실제 소프트웨어로 연결하는 일에 관심이 있습니다. 데이터 엔지니어링, 백엔드, 머신러닝까지 폭넓게 경험해 왔습니다.",
-      "가장 최근에는 NYUAD eBRAIN Lab에서 연구 보조로 HPC 클러스터를 활용해 오디오 언어 모델(ALM)의 보안·취약점을 연구했고, 메커니스틱 해석을 통해 탈옥(jailbreak) 방어 관련 취약점을 분석했습니다. LLM 기반 iOS 앱 Brainlot을 공동 창업해 1,000회 이상 다운로드를 기록했으며, 업로드한 문서를 무한 스크롤형 퀴즈로 바꿔 주는 서비스로 NYUAD 스타트업 인큐베이터에 선정되었습니다. 업계 경험으로는 뉴욕 XBTO Trading(프로메테우스·그라파나 기반 실시간 모니터링, 암호화폐 Oracle 데이터 파이프라인), 두바이 Swop Holdings(Firebase→AWS 인프라 이전, 프리시드 단계 제품 기획), 아부다비 Liwa Capital(LLM 이메일 처리·Microsoft API 연동), 대한민국 대전 IT BAND(해양수산부 산하 국립해양조사원 웹사이트 Java Spring 리뉴얼) 등이 있습니다.",
-      "업무 외에도 Foodify(맛집 소셜), DeepGenre(영화 포스터 장르 분류), SenseFit(마우스 감도 최적화, 테스트 커버리지 90%+) 같은 사이드 프로젝트를 진행합니다. 새로운 기술을 배우며 복잡한 문제를 코드로 풀어 가는 것을 좋아합니다.",
+      "2026년 5월 NYU Abu Dhabi에서 컴퓨터공학 학사 및 응용수학 부전공(GPA: 3.7/4.0)으로 졸업했습니다. 확장 가능한 시스템 구축과 데이터 및 AI를 실용적인 소프트웨어 솔루션에 녹여내는 일에 열정을 가지고 있으며, 데이터 엔지니어링, 백엔드 개발, 머신러닝에 이르는 다양한 영역에서 경험을 쌓아왔습니다.",
+      "가장 최근에는 NYUAD eBRAIN Lab의 연구원(Research Assistant)으로서 HPC 클러스터 기반 오디오 언어 모델의 보안 및 취약점 연구, 그리고 탈옥(Jailbreak) 방어를 위한 매커니즘 해석가능성(Mechanistic Interpretability) 연구를 진행했습니다. 또한, LLM을 활용해 문서를 무제한의 대화형 게임식 퀴즈로 변환해 주는 iOS 애플리케이션 'Brainlot'의 공동 창업자이기도 합니다. Brainlot은 1,000회 이상의 다운로드를 기록하며 NYUAD 스타트업 인큐베이터에 선정되었습니다.",
+      "산업 현장에서는 뉴욕 XBTO Trading의 소프트웨어 엔지니어(Prometheus 및 Grafana를 활용한 실시간 성능 모니터링, 가상자산 시장을 위한 Oracle 데이터 파이프라인 엔지니어링), 두바이 Swop Holdings의 풀스택 개발자(핵심 인프라의 Firebase→AWS 이전 및 프리시드 단계의 제품 비전 기여), Liwa Capital의 소프트웨어 엔지니어(LLM 기반 이메일 처리 및 Microsoft API 활용 맞춤형 데이터 파이프라인 구축), 한국 IT BAND의 백엔드 개발자(Java Spring을 활용한 한국해양교통안전공단 웹사이트 리뉴얼)로 참여하며 역량을 다졌습니다.",
+      "실무 외에도 실시간 인기 맛집 찾기 플랫폼 'Foodify', 영화 포스터 기반 장르 분류 ML 모델 'DeepGenre', 90% 이상의 테스트 커버리지를 갖춘 커서 감도 최적화 데스크톱 툴 'SenseFit' 등 다양한 사이드 프로젝트를 지속적으로 개발해 왔습니다. 복잡한 문제를 코드 연구로 해결하고 새로운 기술을 습득하는 과정 자체를 언제나 즐깁니다.",
     ],
-    toolkitLabel: "기술 스택:",
+    toolkitLabel: "주요 기술 스택:",
     toolkitBody:
-      "Python, C++, Java, JavaScript, PyTorch, AWS, React, Node.js, Prometheus, Grafana, Docker, HPC, FlutterFlow, MATLAB 등. 편하게 연락 주세요!",
+      "Python, C++, Java, JavaScript, PyTorch, AWS, React, Node.js, Prometheus, Grafana, Docker, HPC, FlutterFlow, MATLAB 등.",
     educationTitle: "학력",
     educationSchool: "뉴욕대학교 아부다비 (NYUAD)",
-    educationDegree: "이학사 · 컴퓨터과학 전공 · 응용수학 부전공",
+    educationDegree: "이학사 · 컴퓨터공학 전공 · 응용수학 부전공",
     educationDetails: "2020 – 2026 · 2026년 5월 졸업 · 학점 3.7 / 4.0 · 아부다비, UAE",
     educationCoursework:
       "주요 수강 과목: 머신러닝, 자료구조, 알고리즘, 컴퓨터 비전, 컴퓨터 네트워크, 소프트웨어 공학, 운영체제 등",
