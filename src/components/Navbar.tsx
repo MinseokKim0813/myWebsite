@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 const RESUME_URL =
-  "https://drive.google.com/file/d/174KKtzVPBAuqyA99TP3WRpJFy-K63EnE/view";
+  "https://drive.google.com/file/d/1JYLwCgQXIxnombX1RKIk-zXI8yjOU5_U/view";
 
 const navLinks = [
   { name: "About", href: "#about" },
