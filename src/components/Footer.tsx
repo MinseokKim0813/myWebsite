@@ -9,13 +9,12 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
-  const t = getUi(useLocale());
+  const footer = getUi(useLocale()).footer;
 
   return (
     <footer className="py-8 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center gap-4">
-          {/* Social links */}
           <div className="flex gap-4">
             {socialLinks.map((social) => (
               <a
@@ -31,13 +30,16 @@ export const Footer = () => {
             ))}
           </div>
 
-          {/* Credits */}
           <div className="font-mono text-sm text-muted-foreground text-center">
-            <p className="flex items-center justify-center gap-1">
-              {t.footer.built} <Heart className="w-4 h-4 text-destructive" />{" "}
-              {t.footer.and}{" "}
-              <span className="text-primary">{"<code/>"}</span>
-            </p>
+            {"text" in footer ? (
+              <p>{footer.text}</p>
+            ) : (
+              <p className="flex items-center justify-center gap-1 flex-wrap">
+                {footer.line}{" "}
+                <Heart className="w-4 h-4 text-destructive" /> {footer.heart}{" "}
+                <span className="text-primary">&lt;{footer.code}/&gt;</span>
+              </p>
+            )}
           </div>
         </div>
       </div>

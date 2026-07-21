@@ -2,66 +2,12 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useLocale } from "@/i18n/locale";
 import { getUi } from "@/i18n/ui";
-
-const experiences = [
-  {
-    company: "eBRAIN Lab",
-    role: "Research Assistant",
-    period: "Jan 2026 - Jul 2026",
-    location: "Abu Dhabi, UAE",
-    description: [
-      "Conducted research on security mechanisms and vulnerabilities of large Audio Language Models (ALMs) utilizing HPC clusters.",
-      "Analyzed internal vectors, applying mechanistic interpretability to identify specific security vulnerabilities that trigger jailbreak attacks.",
-    ],
-  },
-  {
-    company: "XBTO Trading",
-    role: "Software Engineering Intern",
-    period: "Jun 2025 - Aug 2025",
-    location: "New York, USA",
-    description: [
-      "Engineered and deployed a real-time performance monitoring system, leveraging Prometheus and Grafana to visualize competitor rankings and individual cryptocurrency scores.",
-      "Maintained and debugged a core data pipeline ingesting purchased raw market data as Oracle data engineering team member, managing the deployment of distinct processing jobs to ensure data integrity and system reliability.",
-      "Conducted data collection and analysis by web scraping competitor and asset performance data, providing key insights to improve external company rankings in cryptocurrency publishing.",
-    ],
-  },
-  {
-    company: "Swop Holdings",
-    role: "Full Stack Developer",
-    period: "Feb 2025 - May 2025",
-    location: "Dubai, UAE",
-    description: [
-      "Joined as a preseed-stage team member, contributing directly to mobile app product vision and VC investments.",
-      "Migrated core data infrastructure from Firebase to AWS, architecting relational database and refactoring backend endpoints.",
-      "Managed data operations: cleaned and structured product data from onboarding partners and ensured accurate ingestion into the relational database.",
-    ],
-  },
-  {
-    company: "Liwa Capital",
-    role: "Software Engineering Intern",
-    period: "Apr 2024 - Jul 2024",
-    location: "Abu Dhabi, UAE",
-    description: [
-      "Developed a custom software that uses LLMs to read emails and update schedules, assign group tasks, and extract actionable insights.",
-      "Constructed secure and personalized data pipeline, integrating LLMs, Microsoft APIs and company's document database.",
-      "Significantly enhanced team productivity by eliminating the need to check hundreds of emails daily.",
-    ],
-  },
-  {
-    company: "IT BAND",
-    role: "Backend Developer",
-    period: "Aug 2021 - Oct 2021",
-    location: "Daejeon, South Korea",
-    description: [
-      "Renovated the official website for the Korea Maritime Transportation Safety Authority, optimizing performance and modernizing the user experience (komsa.or.kr).",
-      "Focused on optimization and debugging, reducing load times and resolving critical errors in the backend to improve performance and reliability.",
-      "Refined backend systems using Java Spring framework, Oracle, HTML, and JavaScript.",
-    ],
-  },
-];
+import { getContent } from "@/i18n/content";
 
 export const Experience = () => {
-  const t = getUi(useLocale());
+  const locale = useLocale();
+  const t = getUi(locale);
+  const experiences = getContent(locale).experiences;
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -74,7 +20,6 @@ export const Experience = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Section header */}
           <div className="flex items-center gap-4 mb-12">
             <span className="text-primary font-mono">04.</span>
             <h2 className="text-3xl md:text-4xl font-bold">{t.sections.experience}</h2>
@@ -82,7 +27,6 @@ export const Experience = () => {
           </div>
 
           <div className="flex flex-col md:flex-row gap-6">
-            {/* Tabs */}
             <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-l border-border">
               {experiences.map((exp, index) => (
                 <button
@@ -105,7 +49,6 @@ export const Experience = () => {
               ))}
             </div>
 
-            {/* Content */}
             <div className="flex-1 min-h-[300px]">
               <motion.div
                 key={activeTab}

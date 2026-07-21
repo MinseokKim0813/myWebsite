@@ -40,8 +40,9 @@ export const ui = {
       previewOpen: "Open",
     },
     footer: {
-      built: "Built with",
-      and: "and lots of",
+      line: "Built with",
+      heart: "and lots of",
+      code: "code",
     },
   },
   ko: {
@@ -54,13 +55,13 @@ export const ui = {
     },
     resume: "이력서",
     languageSwitch: "English",
-    languageSwitchAria: "Switch to English",
+    languageSwitchAria: "영문 버전으로 이동",
     hero: {
       welcome: "// 포트폴리오에 오신 것을 환영합니다",
       greeting: "안녕하세요, ",
       subtitle:
-        "NYU 아부다비 졸업 · 컴퓨터과학 전공, 응용수학 부전공 · 2026년 5월 졸업",
-      bio: "확장 가능한 시스템을 구축하고 데이터와 AI를 실용적인 소프트웨어로 연결하는 일에 관심이 많습니다. 현재는 데이터, 인프라, 지능형 자동화가 만나는 데이터·머신러닝 분야에 특히 관심을 두고 있습니다. 엔드투엔드 솔루션을 만드는 것을 즐기며, 새로운 도전과 협업을 항상 환영합니다!",
+        "NYU 아부다비 졸업 · 컴퓨터과학 전공 · 응용수학 부전공 · 2026년 5월 졸업",
+      bio: "확장 가능한 시스템을 만들고, 데이터와 AI를 실무 소프트웨어로 연결하는 일에 관심이 있습니다. 지금은 데이터·인프라·지능형 자동화가 맞닿는 데이터/ML 문제에 특히 몰두하고 있습니다. 처음부터 끝까지 직접 만드는 것을 좋아하며, 새로운 도전과 협업을 환영합니다.",
     },
     roles: [
       "데이터 사이언스",
@@ -77,14 +78,13 @@ export const ui = {
       contactLabel: "05. 다음 단계",
       contactTitle: "연락하기",
       contactBody:
-        "새로운 기회와 협업을 찾고 있습니다. 질문이 있으시거나 연구 이야기를 나누고 싶으시거나, 가볍게 인사만 하고 싶으셔도 언제든 연락 주세요!",
-      sayHello: "메일 보내기",
+        "새로운 기회와 협업을 찾고 있습니다. 궁금한 점이 있거나 연구 이야기를 나누고 싶으시면, 가볍게 인사를 남겨 주셔도 좋습니다.",
+      sayHello: "이메일 보내기",
       researchSub: "연구",
-      previewOpen: "열기",
+      previewOpen: "미리보기",
     },
     footer: {
-      built: "만든 사람:",
-      and: "그리고 많은",
+      text: "♥와 열정, 그리고 많은 코드로 만들었습니다",
     },
   },
 } as const;

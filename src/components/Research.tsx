@@ -9,6 +9,9 @@ import {
 } from "@/components/ui/dialog";
 import { useLocale } from "@/i18n/locale";
 import { getUi } from "@/i18n/ui";
+import { getContent, publications } from "@/i18n/content";
+
+export { publications };
 
 const getGoogleDriveFileId = (url: string) =>
   url.match(/\/d\/([^/]+)/)?.[1] ?? null;
@@ -79,78 +82,11 @@ const ResearchPreviewBox = ({
   );
 };
 
-const currentResearchActivity = {
-  role: "Research Assistant",
-  lab: "eBRAIN Lab",
-  institution: "NYU Abu Dhabi",
-  period: "Jan 2026 – Jul 2026",
-  topic: "LLM Jailbreak Security",
-  summary:
-    "We study how harmful instructions hidden in audio can trick speech-AI models, and where those attacks take effect inside the model. Jailbreak signals concentrate in mid-to-upper mel bands and at architecture-specific decoder depths; cross-model transfer fails yet exposes per-band asymmetry, informing band-region suppression and layer-level monitoring as defenses.",
-  authors: [
-    "Boyuan Chen [NYU]",
-    "Sohaila Abdulsattar [NYU]",
-    "Minseok Kim [NYU]",
-    "Minghao Shao [NYU]",
-    "Siddharth Garg [NYU]",
-    "Ramesh Karri [NYU]",
-    "Muhammad Shafique [NYU]",
-  ],
-  link: "https://drive.google.com/file/d/1ezMtR8nA6skwas9sc-OCNCWq0IyQkjkH/view",
-};
-
-export const publications = [
-  {
-    title:
-      "Gender Identification of Arabic Names: A Comparative Analysis of Morphological, Semantic and Deep Learning Approaches",
-    venue: "Research Paper",
-    year: "2025",
-    authors: ["Minseok Kim [NYU Abu Dhabi]"],
-    advisors: "Nizar Habash [NYU Abu Dhabi]",
-    abstract:
-      "A novel hybrid gender classifier for Arabic names combining a morphological analyzer with linguistic rules and a fine-tuned Transformer, achieving 91.68% accuracy and outperforming the baseline by integrating linguistic rules with deep learning inference.",
-    link: "https://drive.google.com/file/d/12Fqo6CqU5zPI6X3DGB6CRB2hLpGwGlxB/view?usp=sharing",
-    type: "Research Paper",
-  },
-  {
-    title:
-      "MathTextor: Humanizing Mathematical Typesetting for Undergraduate Students",
-    venue: "Research Paper",
-    year: "2025",
-    authors: ["Minseok Kim [NYU Abu Dhabi], Moumena Chaqfeh [NYU Abu Dhabi]"],
-    advisors: "Moumena Chaqfeh [NYU Abu Dhabi], Steven Euijong Whang [KAIST]",
-    abstract:
-      "A context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context. A user study with 24 participants showed a 38.6% reduction in typesetting time for novice users; the system achieved 72.9% F1 score and 4.57/7 usability.",
-    link: "https://drive.google.com/file/d/1sMfhqQK3Pa2jVjlNYSmCbQ5T4j-dNu1X/view?usp=sharing",
-    type: "Research Paper",
-  },
-];
-
-const researchInterests = [
-  {
-    title: "Machine Learning",
-    description:
-      "Deep learning, neural architecture search, and model compression",
-  },
-  {
-    title: "Natural Language Processing",
-    description:
-      "Transformers, multilingual models, and semantic understanding",
-  },
-  {
-    title: "Human Computer Interaction",
-    description:
-      "User-centered design, usability evaluation, and interactive systems",
-  },
-  {
-    title: "LLM Security",
-    description:
-      "Prompt injection, model robustness, and safe deployment of language models",
-  },
-];
-
 export const Research = () => {
-  const t = getUi(useLocale());
+  const locale = useLocale();
+  const t = getUi(locale);
+  const { interests: researchInterests, current: currentResearchActivity, publications: publicationList, advisedBy } =
+    getContent(locale).research;
 
   return (
     <section id="research" className="py-24">
@@ -227,9 +163,7 @@ export const Research = () => {
                       </a>
                     </h4>
                     <p className="mt-1 text-sm text-foreground">
-                      {currentResearchActivity.role} at{" "}
-                      {currentResearchActivity.institution} ·{" "}
-                      {currentResearchActivity.period}
+                      {currentResearchActivity.roleMeta}
                     </p>
                     <p className="mt-2 text-sm text-muted-foreground">
                       {currentResearchActivity.authors.join(", ")}
@@ -245,7 +179,7 @@ export const Research = () => {
                   openLabel={t.sections.previewOpen}
                 />
               </motion.article>
-              {publications.map((pub, index) => (
+              {publicationList.map((pub, index) => (
                 <motion.article
                   key={pub.title}
                   initial={{ opacity: 0, x: -20 }}
@@ -276,13 +210,10 @@ export const Research = () => {
                       </h4>
                       <p className="mt-2 text-sm text-muted-foreground">
                         {pub.authors.join(", ")}
-                        {"affiliation" in pub &&
-                          pub.affiliation &&
-                          `, ${pub.affiliation}`}
                       </p>
-                      {"advisors" in pub && pub.advisors && (
+                      {pub.advisors && (
                         <p className="mt-1 text-sm text-muted-foreground">
-                          Advised by: {pub.advisors}
+                          {advisedBy} {pub.advisors}
                         </p>
                       )}
                       <p className="mt-3 line-clamp-2 text-sm text-foreground">

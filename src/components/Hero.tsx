@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { useLocale } from "@/i18n/locale";
 import { getUi } from "@/i18n/ui";
+import { getContent } from "@/i18n/content";
 
 export const Hero = () => {
   const locale = useLocale();
   const t = getUi(locale);
+  const { nameFull, nameGiven } = getContent(locale).hero;
   const roles = t.roles;
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -94,7 +96,7 @@ export const Hero = () => {
                 <span className="syntax-keyword">const</span>{" "}
                 <span className="syntax-variable">developer</span>{" "}
                 <span className="text-foreground">=</span>{" "}
-                <span className="syntax-string">"Minseok Kim"</span>;
+                <span className="syntax-string">"{nameFull}"</span>;
               </p>
 
               <div className="pt-4">
@@ -105,7 +107,7 @@ export const Hero = () => {
                   transition={{ delay: 0.4 }}
                 >
                   <span className="text-foreground">{t.hero.greeting}</span>
-                  <span className="text-gradient">Minseok</span>
+                  <span className="text-gradient">{nameGiven}</span>
                 </motion.h1>
               </div>
 
