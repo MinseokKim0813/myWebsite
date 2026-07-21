@@ -111,26 +111,25 @@ export const About = () => {
                   at the eBRAIN Lab at NYU Abu Dhabi, researching security and
                   vulnerabilities in audio language models on HPC clusters and
                   mechanistic interpretability for jailbreak defense. I am also
-                  the co-founder of Brainlot, an iOS application with over
-                  1,000 downloads that transforms documents into an infinite
-                  stream of interactive, gamified quizzes using LLMs—selected
-                  for the NYUAD startup incubator. My industry experience
-                  includes:{" "}
+                  the co-founder of Brainlot, an iOS application with over 1,000
+                  downloads that transforms documents into an infinite stream of
+                  interactive, gamified quizzes using LLMs — selected for the
+                  NYUAD startup incubator. My industry experience includes:{" "}
                   <strong className="text-foreground">
                     Software Engineering
                   </strong>{" "}
                   at XBTO Trading in New York (real-time performance monitoring
-                  with Prometheus and Grafana, Oracle data pipeline
-                  engineering for cryptocurrency markets);{" "}
+                  with Prometheus and Grafana, Oracle data pipeline engineering
+                  for cryptocurrency markets);{" "}
                   <strong className="text-foreground">Full Stack</strong> at
                   Swop Holdings in Dubai (migrating core infrastructure from
-                  Firebase to AWS and contributing to product vision at
-                  pre-seed stage);{" "}
+                  Firebase to AWS and contributing to product vision at pre-seed
+                  stage);{" "}
                   <strong className="text-foreground">
                     Software Engineering
                   </strong>{" "}
-                  at Liwa Capital (LLM-powered email processing and
-                  personalized data pipelines with Microsoft APIs); and{" "}
+                  at Liwa Capital (LLM-powered email processing and personalized
+                  data pipelines with Microsoft APIs); and{" "}
                   <strong className="text-foreground">Backend</strong> at IT
                   BAND in South Korea (renovating the Korea Maritime
                   Transportation Safety Authority website with Java Spring).
@@ -169,8 +168,8 @@ export const About = () => {
                   Bachelor of Science · Major in Computer Science · Minor in
                   Applied Mathematics
                   <br />
-                  2020 – 2026 · Graduated May 2026 · GPA: 3.7 / 4.0 · Abu
-                  Dhabi, UAE
+                  2020 – 2026 · Graduated May 2026 · GPA: 3.7 / 4.0 · Abu Dhabi,
+                  UAE
                   <br />
                   <span className="text-muted-foreground/90">
                     Relevant coursework: Machine Learning, Data Structures,
