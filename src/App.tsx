@@ -9,11 +9,17 @@ import { LocaleProvider } from "./i18n/locale";
 
 const queryClient = new QueryClient();
 
-// GitHub Pages serves from /repoName/ — derive basename so routing works for any repo name.
+// GitHub Pages serves from /repoName/ — use build-time base path when set.
 function getBasename(): string {
+  const fromEnv = import.meta.env.VITE_BASE_PATH;
+  if (typeof fromEnv === "string" && fromEnv.length > 0) {
+    return fromEnv.startsWith("/") ? fromEnv : `/${fromEnv}`;
+  }
+
   const segments = window.location.pathname.split("/").filter(Boolean);
   if (segments.length === 0) return "";
-  return "/" + segments[0];
+  if (segments[0] === "index.html") return "";
+  return `/${segments[0]}`;
 }
 
 const App = () => (
