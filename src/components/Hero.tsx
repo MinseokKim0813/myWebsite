@@ -126,7 +126,7 @@ export const Hero = () => {
               </div>
 
               <motion.p
-                className="text-muted-foreground text-sm md:text-base pt-1 font-mono"
+                className="text-muted-foreground text-xs sm:text-sm md:text-base pt-1 font-mono whitespace-nowrap overflow-x-auto"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
