@@ -79,12 +79,12 @@ export const koContent: SiteContent = {
       {
         id: "brainlot",
         title: "Brainlot",
-        subtitle: "무한 스크롤 학습 플랫폼",
+        subtitle: "무한 스크롤 기반 학습 플랫폼",
         tech: ["백엔드", "모바일 앱", "데이터베이스"],
         highlights: [
-          "iOS 앱을 공동 창업·출시해 1,000회 이상 다운로드를 달성했습니다. 세로 무한 스크롤 UI로 사용자가 올린 문서를 연속적인 객관식 퀴즈 스트림으로 자동 변환합니다.",
-          "백그라운드에서 끊김 없는 퀴즈 생성 파이프라인을 설계했고, 클라우드 LLM과 로컬 LLM을 전환할 수 있는 추론 구조를 구현했습니다.",
-          "NYUAD 스타트업 인큐베이터에 선정되어 제품 성장을 위한 멘토링을 받았고, 시장에서의 차별성을 검증했습니다.",
+          "사용자가 업로드한 문서를 대화형 게임식 객관식 퀴즈의 연속적인 스트림으로 자동 변환하는 무한 세로 스크롤 인터페이스 탑재 iOS 애플리케이션을 공동 창업 및 출시 (다운로드 수 1,000회 이상 기록).",
+          "끊김 없는 무한 스크롤을 지원하는 백그라운드 무한 퀴즈 생성 파이프라인을 구축했으며, 클라우드 기반 LLM과 오프라인 로컬 LLM을 자유롭게 전환할 수 있는 유연한 추론 아키텍처를 설계.",
+          "전문적인 멘토링을 통해 제품 성장을 가속화하는 NYUAD 스타트업 인큐베이터에 선정되어, 시장에서의 독창성과 성장 가능성을 입증받음.",
         ],
         external:
           "https://apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB",
@@ -94,7 +94,7 @@ export const koContent: SiteContent = {
       {
         id: "foodify",
         title: "Foodify",
-        subtitle: "인기 맛집 소셜 플랫폼",
+        subtitle: "트렌디한 맛집 탐색 소셜 플랫폼",
         tech: [
           "백엔드",
           "웹 앱",
@@ -104,9 +104,9 @@ export const koContent: SiteContent = {
           "데이터베이스",
         ],
         highlights: [
-          "스와이프로 맛집을 발견하고, 리스트를 좋아요·공유하며 추천을 탐색할 수 있는 소셜 플랫폼을 만들었습니다.",
-          "취향을 공유하며 연결하고, 소규모 업체가 SNS처럼 노출될 수 있도록 돕습니다.",
-          "Yelp·Google Maps 데이터를 스크래핑하고 Firebase로 관리했습니다.",
+          "스와이프 동작을 통해 트렌디한 맛집을 탐색하고, 맛집 리스트를 좋아요/공유하며, 인기 추천 장소를 찾아볼 수 있는 소셜 플랫폼 구축.",
+          "소셜 미디어 형태의 경험을 통해 사용자들이 취향을 공유하며 자연스럽게 연결되도록 돕는 동시에, 숨은 로컬 맛집들이 발견될 수 있는 환경을 조성.",
+          "Yelp 및 Google Maps 데이터 수집을 위한 웹 스크래핑 파이프라인을 구축하고, Firebase를 활용해 데이터를 효율적으로 관리.",
         ],
         external: "https://foodify.cc",
         image: "gradient-2",
@@ -115,12 +115,12 @@ export const koContent: SiteContent = {
       {
         id: "sensefit",
         title: "SenseFit",
-        subtitle: "마우스 감도 자동 조절 도구",
+        subtitle: "커서 감도 자동 최적화 툴",
         tech: ["소프트웨어 공학", "Python", "PyQt5", "pytest"],
         highlights: [
-          "실시간 커서 데이터를 추적·분석해 사용자에게 최적의 마우스 감도(DPI)를 제안하는 데스크톱 앱을 개발했습니다.",
-          "복잡한 커서 움직임 패턴을 분석해 비효율적인 사용 습관을 정량화하고, 데이터 기반 추천을 생성하는 알고리즘을 설계했습니다.",
-          "pytest로 단위·시스템 테스트 커버리지 90% 이상을 달성해 안정성을 확보했습니다.",
+          "실시간 커서 데이터를 추적하고 이동 패턴을 분석하여 사용자에게 최적의 마우스 감도(DPI)를 계산 및 추천해 주는 데스크톱 애플리케이션 개발.",
+          "커서의 복잡한 이동 패턴을 분석하고 비효율적인 조작 동작을 정량화하는 고도화된 분석 알고리즘을 설계하여 데이터 기반의 맞춤형 감도 추천 기능 구현.",
+          "pytest를 활용해 90% 이상의 유닛 및 시스템 테스트 커버리지를 달성함으로써 높은 소프트웨어 신뢰성 확보.",
         ],
         github: "https://github.com/MinseokKim0813/Sense_Fit",
         external: "https://github.com/MinseokKim0813/Sense_Fit",
@@ -130,12 +130,12 @@ export const koContent: SiteContent = {
       {
         id: "deepgenre",
         title: "DeepGenre",
-        subtitle: "영화 포스터 장르 분류 딥러닝 모델",
+        subtitle: "딥러닝 기반 영화 장르 분류 모델",
         tech: ["머신러닝", "컴퓨터 비전", "PyTorch", "Python"],
         highlights: [
-          "영화 포스터 이미지만으로 28개 장르를 예측하는 멀티 라벨 CNN 모델을 개발했습니다.",
-          "정밀도 59.98%를 달성해 무작위 기준(3.5%) 대비 16.8배 높은 성능을 보였고, 시각 인식에서 전이 학습의 효과를 확인했습니다.",
-          "OCR과 인페인팅으로 포스터의 글자를 제거해 제목 텍스트 편향 없이 시각 정보만으로 분류하도록 했습니다.",
+          "영화 포스터 이미지를 기반으로 28개의 다채로운 장르를 예측하는 멀티라벨(Multi-label) CNN 모델 개발.",
+          "랜덤 베이스라인 정확도(3.5%) 대비 16.8배 뛰어난 59.98%의 정밀도(Precision)를 달성하여, 복잡한 시각적 인식 과제에서 전이 학습(Transfer Learning)의 강력한 성능을 입증.",
+          "영화 제목에서 기인하는 예측 편향을 차단하기 위해 OCR 및 인페인팅(In-painting) 기법으로 텍스트를 제거함으로써, 언어적 힌트가 아닌 오직 포스터의 시각적 아트워크만을 기반으로 분류하도록 구현.",
         ],
         github: "https://github.com/MinseokKim0813/DeepGenre",
         external: "https://github.com/MinseokKim0813/DeepGenre",
@@ -145,12 +145,12 @@ export const koContent: SiteContent = {
       {
         id: "genderar",
         title: "GenderAr",
-        subtitle: "아랍어 이름 성별 분류 (연구 보고서)",
-        tech: ["머신러닝", "NLP", "Transformer", "Python"],
+        subtitle: "아랍어 이름 성별 분류 모델 (연구 보고서)",
+        tech: ["머신러닝", "자연어 처리(NLP)", "트랜스포머(Transformers)", "Python"],
         highlights: [
-          "형태소 분석기와 언어 규칙, 파인튜닝 Transformer를 결합한 아랍어 이름 성별 분류 하이브리드 모델을 제안했습니다.",
-          "정확도 91.68%로, 규칙 기반과 딥러닝을 함께 쓰는 접근이 단독 모델보다 우수함을 보였습니다.",
-          "형태소·의미·딥러닝 및 하이브리드 캐스케이드 등 세 가지 방법론을 구현·평가했습니다.",
+          "특정 언어적 규칙을 활용하는 형태소 분석기(Morphological Analyzer)와 딥러닝 추론을 위해 파인튜닝된 트랜스포머(Transformer) 등 두 가지 맞춤형 학습 모델을 결합하여, 아랍어 이름에 최적화된 새로운 하이브리드 성별 분류기 개발.",
+          "언어적 규칙과 딥러닝 추론을 성공적으로 통합함으로써 베이스라인 모델의 성능을 뛰어넘는 91.68%의 정확도(Accuracy) 달성.",
+          "형태소 분석 모델(로지스틱 회귀), 의미 분석 모델(워드 임베딩), 딥러닝 모델(파인튜닝 트랜스포머)의 3가지 개별 분류 방법론과 하이브리드 캐스케이드(Hybrid Cascade) 시스템을 구현하고 성능을 비교 평가.",
         ],
         github: "https://github.com/MinseokKim0813/GenderAr",
         external: RESEARCH_LINKS.gender,
@@ -160,12 +160,12 @@ export const koContent: SiteContent = {
       {
         id: "mathtextor",
         title: "MathTextor",
-        subtitle: "수식 입력 UX 개선 (연구 보고서)",
-        tech: ["풀스택", "웹 앱", "HCI", "Javascript"],
+        subtitle: "수식 조판의 인간화 (연구 보고서)",
+        tech: ["풀스택", "웹 앱", "인간-컴퓨터 상호작용(HCI)", "JavaScript"],
         highlights: [
-          "문제 맥락에 맞는 수학 기호를 LLM이 예측·제안하는 맥락 인식 웹 인터페이스를 개발했습니다.",
-          "24명 대상 사용자 연구에서 초보자의 조판 시간이 기존 LaTeX 편집기 대비 38.6% 줄었습니다.",
-          "F1 72.9%, 사용성 4.57/7을 달성하며 HCI 원칙을 반영한 LLM 추론 파이프라인을 구축했습니다.",
+          "문제 문맥을 분석해 수학 기호를 동적으로 예측하고 제안하는 LLM 기반의 문맥 인식(Context-aware) 웹 인터페이스를 개발하여, 사용자가 복잡한 LaTeX 문법을 암기해야 하는 불편함을 해소.",
+          "24명의 참가자를 대상으로 사용자 연구(User study)를 진행하여, 초보 사용자가 수식을 작성하는 데 걸리는 시간을 기존 LaTeX 에디터 대비 38.6% 단축했음을 입증.",
+          "72.9%의 F1 점수(F1 Score)를 기록한 LLM 추론 파이프라인을 구축하고 HCI(인간-컴퓨터 상호작용) 디자인 원칙을 적용해 사용자 경험을 최적화했으며, 결과적으로 7점 만점에 4.57점의 사용성 점수(Usability score)를 달성.",
         ],
         github: "https://github.com/MinseokKim0813/MathTextor",
         external: RESEARCH_LINKS.mathTextor,
@@ -175,11 +175,11 @@ export const koContent: SiteContent = {
       {
         id: "trendmap",
         title: "TrendMap",
-        subtitle: "실시간 미디어 관심도 분석",
+        subtitle: "실시간 미디어 관심도 분석 툴",
         tech: ["데이터 분석", "웹 스크래핑", "Python"],
         highlights: [
-          "미국 주요 기업의 미디어 언급량을 추적하고 산업·주별 트렌드를 분석하는 도구를 만들었습니다.",
-          "관심이 집중되는 섹터와 지역을 파악해 투자·시장 분석에 활용할 수 있는 인사이트를 제공합니다.",
+          "미국 주요 기업들의 언론 언급량(Media mentions)을 추적하고, 산업 분야 및 주(State)별 트렌드를 다각도로 분석하는 툴 개발.",
+          "가장 높은 미디어의 관심을 받는 산업군(Sector)과 지역을 식별하여, 데이터 기반의 투자 결정 및 시장 분석을 위한 유의미한 인사이트 제공.",
         ],
         github: "https://github.com/MinseokKim0813/TrendMap",
         external: "https://github.com/MinseokKim0813/TrendMap",
@@ -189,11 +189,11 @@ export const koContent: SiteContent = {
       {
         id: "fundmonitor",
         title: "FundMonitor",
-        subtitle: "크라우드펀딩 데이터 수집·분석",
+        subtitle: "크라우드펀딩 캠페인 데이터 스크래퍼 및 분석 툴",
         tech: ["데이터 분석", "웹 스크래핑", "Python"],
         highlights: [
-          "크라우드펀딩 플랫폼에서 실시간 데이터를 수집·분석해 카테고리·지역별 펀딩 현황을 보여 주는 스크래퍼를 개발했습니다.",
-          "글로벌 펀딩 트렌드와 소외 섹터를 파악해 CSR, 투자, 제품 기획에 참고할 수 있도록 했습니다.",
+          "크라우드펀딩 플랫폼에서 실시간 데이터를 추출하고 분석하는 웹 스크래퍼를 개발하여, 다양한 카테고리 및 지역별 펀딩 진행 현황에 대한 심층적인 인사이트 제공.",
+          "글로벌 펀딩 트렌드와 자금 조달이 부족한 섹터(Underfunded sectors)를 식별함으로써, 최적화된 기업의 사회적 책임(CSR) 전략 수립, 타겟 투자, 그리고 제품 혁신 기회 발굴을 지원.",
         ],
         github: "https://github.com/MinseokKim0813/FundMonitor",
         external: "https://github.com/MinseokKim0813/FundMonitor",
