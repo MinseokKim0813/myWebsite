@@ -39,6 +39,7 @@ export const ui = {
       sayHello: "Say Hello",
       researchSub: "Research",
       previewOpen: "Open",
+      location: "Abu Dhabi, UAE",
     },
     footer: {
       line: "Built with",
@@ -77,16 +78,19 @@ export const ui = {
       projects: "프로젝트",
       research: "연구",
       experience: "경력",
-      contactLabel: "05. 다음 단계",
-      contactTitle: "연락하기",
+      contactLabel: "05. What's Next?",
+      contactTitle: "연락 주세요!",
       contactBody:
-        "새로운 기회와 협업을 찾고 있습니다. 궁금한 점이 있거나 연구 이야기를 나누고 싶으시면, 가볍게 인사를 남겨 주셔도 좋습니다.",
-      sayHello: "이메일 보내기",
+        "현재 새로운 기회와 협업을 적극적으로 모색하고 있습니다. 궁금한 점이 있으시거나, 연구에 대해 논의하고 싶으시거나, 혹은 가볍게 인사를 나누고 싶으시다면 언제든 편하게 연락해 주세요. 제 메일함은 항상 열려 있습니다!",
+      sayHello: "인사 남기기",
       researchSub: "연구",
       previewOpen: "미리보기",
+      location: "대한민국",
     },
     footer: {
-      text: "♥와 열정, 그리고 많은 코드로 만들었습니다",
+      line: "Built with",
+      heart: "and lots of",
+      code: "code",
     },
   },
 } as const;

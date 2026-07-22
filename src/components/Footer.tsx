@@ -9,7 +9,7 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
-  const footer = getUi(useLocale()).footer;
+  const { line, heart, code } = getUi(useLocale()).footer;
 
   return (
     <footer className="py-8 border-t border-border">
@@ -31,15 +31,10 @@ export const Footer = () => {
           </div>
 
           <div className="font-mono text-sm text-muted-foreground text-center">
-            {"text" in footer ? (
-              <p>{footer.text}</p>
-            ) : (
-              <p className="flex items-center justify-center gap-1 flex-wrap">
-                {footer.line}{" "}
-                <Heart className="w-4 h-4 text-destructive" /> {footer.heart}{" "}
-                <span className="text-primary">&lt;{footer.code}/&gt;</span>
-              </p>
-            )}
+            <p className="flex items-center justify-center gap-1 flex-wrap">
+              {line} <Heart className="w-4 h-4 text-destructive" /> {heart}{" "}
+              <span className="text-primary">&lt;{code}/&gt;</span>
+            </p>
           </div>
         </div>
       </div>

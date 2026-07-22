@@ -38,7 +38,7 @@ export const Contact = () => {
             </a>
             <div className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="w-5 h-5 text-primary" />
-              <span className="font-mono">Abu Dhabi, UAE</span>
+              <span className="font-mono">{t.sections.location}</span>
             </div>
           </div>
 
