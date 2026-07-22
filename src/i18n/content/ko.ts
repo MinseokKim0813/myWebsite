@@ -116,7 +116,7 @@ export const koContent: SiteContent = {
         id: "sensefit",
         title: "SenseFit",
         subtitle: "커서 감도 자동 최적화 툴",
-        tech: ["소프트웨어 공학", "Python", "PyQt5", "pytest"],
+        tech: ["Python", "PyQt5", "pytest"],
         highlights: [
           "실시간으로 마우스 커서 데이터를 추적하고 움직임 패턴을 분석하여, 사용자에게 최적의 마우스 감도(DPI)를 계산하고 제안하는 데스크톱 애플리케이션을 개발함.",
           "분석 알고리즘을 설계하여 비효율적인 커서 움직임과 같은 최적화되지 않은 조작 습관을 식별하고, 이를 바탕으로 데이터 기반의 개선안을 제공함.",
